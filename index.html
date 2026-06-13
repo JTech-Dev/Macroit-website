@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MacroIt — Track Macros. Eat Smarter.</title>
+    <meta
+      name="description"
+      content="MacroIt uses AI-powered food detection, barcode scanning, and Apple Watch sync to make nutrition tracking effortless."
+    />
+    <meta property="og:title" content="MacroIt — Track Macros. Eat Smarter." />
+    <meta
+      property="og:description"
+      content="AI-powered nutrition tracking for iOS and Apple Watch."
+    />
+    <meta property="og:type" content="website" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                blue: "#3B82F6",
+                purple: "#8B5CF6",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .gradient-text {
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900 antialiased">
+    <!-- NAV -->
+    <nav
+      class="fixed top-0 w-full bg-white/90 backdrop-blur-md border-b border-gray-100 z-50"
+    >
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-2">
+          <span class="text-2xl">🍴</span>
+          <span class="font-bold text-xl">MacroIt</span>
+        </div>
+        <div class="hidden md:flex items-center gap-8 text-sm text-gray-600">
+          <a href="#features" class="hover:text-blue-500 transition"
+            >Features</a
+          >
+          <a href="#pricing" class="hover:text-blue-500 transition">Pricing</a>
+          <a href="support.html" class="hover:text-blue-500 transition"
+            >Support</a
+          >
+        </div>
+        <a
+          href="#"
+          class="bg-blue-500 hover:bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-full transition shadow-sm"
+        >
+          Download Free
+        </a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="pt-28 pb-16 sm:pt-32 sm:pb-20 px-4 sm:px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <!-- Left — Text -->
+          <div class="text-center md:text-left">
+            <span
+              class="inline-block text-blue-500 font-semibold text-sm tracking-wide uppercase mb-4"
+            >
+              Available on iOS · Apple Watch
+            </span>
+            <h1
+              class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight"
+            >
+              Track Macros.<br />
+              <span class="gradient-text">Eat Smarter.</span>
+            </h1>
+            <p
+              class="mt-6 text-base sm:text-lg text-gray-500 leading-relaxed max-w-lg mx-auto md:mx-0"
+            >
+              MacroIt uses AI-powered food detection, barcode scanning, and
+              Apple Watch sync to make nutrition tracking effortless.
+            </p>
+            <div
+              class="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+            >
+              <a
+                href="#"
+                class="flex items-center justify-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-full transition shadow-lg shadow-blue-200"
+              >
+                <svg
+                  class="w-5 h-5 flex-shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"
+                  />
+                </svg>
+                Download on App Store
+              </a>
+              <a
+                href="#features"
+                class="flex items-center justify-center gap-2 border border-gray-200 hover:border-blue-300 text-gray-700 font-semibold px-6 py-3 rounded-full transition"
+              >
+                See Features →
+              </a>
+            </div>
+            <p class="mt-4 text-sm text-gray-400 text-center md:text-left">
+              Free to download · No credit card required
+            </p>
+          </div>
+
+          <!-- Right — Hero Screenshots -->
+          <div class="flex gap-4 justify-center items-start">
+            <img
+              src="assets/screenshots/dashboard.png"
+              alt="MacroIt Dashboard"
+              class="w-40 sm:w-48 rounded-3xl shadow-2xl shadow-blue-100 border border-gray-100"
+            />
+            <img
+              src="assets/screenshots/smartadd.jpeg"
+              alt="AI Food Detection"
+              class="w-40 sm:w-48 rounded-3xl shadow-2xl shadow-purple-100 border border-gray-100 mt-12"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF BAR -->
+    <div class="bg-gray-50 border-y border-gray-100 py-6 px-4">
+      <div
+        class="max-w-6xl mx-auto flex flex-wrap justify-center gap-6 sm:gap-10 text-sm text-gray-500"
+      >
+        <div class="flex items-center gap-2">
+          <span class="text-green-500 font-bold">✓</span>AI-Powered Analysis
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-green-500 font-bold">✓</span>Apple Watch Support
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-green-500 font-bold">✓</span>iCloud Sync
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-green-500 font-bold">✓</span>HealthKit Integration
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-green-500 font-bold">✓</span>Privacy First
+        </div>
+      </div>
+    </div>
+
+    <!-- FEATURES -->
+    <section id="features" class="py-16 sm:py-20 px-4 sm:px-6 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12 sm:mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold">
+            Everything you need to track nutrition
+          </h2>
+          <p class="mt-4 text-gray-500 text-base sm:text-lg max-w-2xl mx-auto">
+            Powerful features designed to make healthy eating effortless
+          </p>
+        </div>
+
+        <!-- Feature Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition hover:-translate-y-1"
+          >
+            <div
+              class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-2xl mb-4"
+            >
+              🤖
+            </div>
+            <h3 class="font-bold text-lg mb-2">AI Food Detection</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              Photograph your meal and instantly get accurate macro estimates
+              powered by Claude AI. Add context notes for even better accuracy.
+            </p>
+          </div>
+          <div
+            class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition hover:-translate-y-1"
+          >
+            <div
+              class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-2xl mb-4"
+            >
+              📱
+            </div>
+            <h3 class="font-bold text-lg mb-2">Barcode Scanner</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              Scan any packaged food and get instant nutrition info from
+              millions of products in the Open Food Facts database.
+            </p>
+          </div>
+          <div
+            class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition hover:-translate-y-1"
+          >
+            <div
+              class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-2xl mb-4"
+            >
+              ⌚
+            </div>
+            <h3 class="font-bold text-lg mb-2">Apple Watch</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              Track macros and log water directly from your wrist with live
+              complications and real-time sync.
+            </p>
+          </div>
+          <div
+            class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition hover:-translate-y-1"
+          >
+            <div
+              class="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center text-2xl mb-4"
+            >
+              💧
+            </div>
+            <h3 class="font-bold text-lg mb-2">Water Tracking</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              Set daily water goals and track intake with quick-add buttons,
+              weekly charts, and detailed history.
+            </p>
+          </div>
+          <div
+            class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition hover:-translate-y-1"
+          >
+            <div
+              class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center text-2xl mb-4"
+            >
+              🎯
+            </div>
+            <h3 class="font-bold text-lg mb-2">Smart Goals</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              Personalized calorie and macro goals calculated from your profile
+              using the Mifflin-St Jeor formula.
+            </p>
+          </div>
+          <div
+            class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition hover:-translate-y-1"
+          >
+            <div
+              class="w-12 h-12 bg-pink-100 rounded-xl flex items-center justify-center text-2xl mb-4"
+            >
+              📊
+            </div>
+            <h3 class="font-bold text-lg mb-2">Calendar Log</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              View daily, weekly and monthly summaries with detailed macro
+              breakdowns and water intake history.
+            </p>
+          </div>
+        </div>
+
+        <!-- ← Screenshots Row INSIDE features section -->
+        <div class="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
+          <img
+            src="assets/screenshots/dashboard.png"
+            alt="Dashboard"
+            class="rounded-2xl shadow-lg border border-gray-100 w-full"
+          />
+          <img
+            src="assets/screenshots/water.png"
+            alt="Water Tracking"
+            class="rounded-2xl shadow-lg border border-gray-100 w-full mt-6"
+          />
+          <img
+            src="assets/screenshots/smartadd.jpeg"
+            alt="AI Food Detection"
+            class="rounded-2xl shadow-lg border border-gray-100 w-full"
+          />
+          <img
+            src="assets/screenshots/calendar.jpeg"
+            alt="Calendar Log"
+            class="rounded-2xl shadow-lg border border-gray-100 w-full mt-6"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- APPLE WATCH SECTION -->
+    <section class="py-16 sm:py-20 px-4 sm:px-6 bg-gray-900">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <!-- Left — Text -->
+          <div class="text-center md:text-left">
+            <span
+              class="inline-block text-blue-400 font-semibold text-sm tracking-wide uppercase mb-4"
+            >
+              Apple Watch
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-bold text-white leading-tight">
+              Track on your wrist.<br />
+              <span class="text-blue-400">Stay on track.</span>
+            </h2>
+            <p class="mt-6 text-gray-400 text-base sm:text-lg leading-relaxed">
+              MacroIt syncs seamlessly with your Apple Watch. Log water, check
+              your macros, and track your progress — all without touching your
+              phone.
+            </p>
+            <ul class="mt-8 space-y-3 text-gray-300 text-sm">
+              <li class="flex items-center gap-3">
+                <span
+                  class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs flex-shrink-0"
+                  >✓</span
+                >
+                Live macro complications on watch face
+              </li>
+              <li class="flex items-center gap-3">
+                <span
+                  class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs flex-shrink-0"
+                  >✓</span
+                >
+                Quick water logging from your wrist
+              </li>
+              <li class="flex items-center gap-3">
+                <span
+                  class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs flex-shrink-0"
+                  >✓</span
+                >
+                Real-time sync with iPhone
+              </li>
+              <li class="flex items-center gap-3">
+                <span
+                  class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs flex-shrink-0"
+                  >✓</span
+                >
+                Steps, sleep and health data
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right — Watch Screenshots -->
+          <div class="flex gap-6 justify-center items-end">
+            <div class="text-center">
+              <img
+                src="assets/screenshots/watch-water.png"
+                alt="Apple Watch Water Log"
+                class="w-36 sm:w-44 rounded-3xl shadow-2xl shadow-blue-900 border border-gray-700"
+              />
+              <p class="mt-3 text-gray-500 text-xs">Water Tracking</p>
+            </div>
+            <div class="text-center mb-8">
+              <img
+                src="assets/screenshots/watch-complications.png"
+                alt="Apple Watch Complications"
+                class="w-36 sm:w-44 rounded-3xl shadow-2xl shadow-purple-900 border border-gray-700"
+              />
+              <p class="mt-3 text-gray-500 text-xs">Complications</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="py-16 sm:py-20 px-4 sm:px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12 sm:mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold">Simple pricing</h2>
+          <p class="mt-4 text-gray-500 text-base sm:text-lg">
+            Start free. Upgrade when you're ready.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <!-- Free -->
+          <div class="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8">
+            <h3 class="font-bold text-lg">Free</h3>
+            <div class="mt-3">
+              <span class="text-4xl sm:text-5xl font-bold">$0</span>
+            </div>
+            <p class="text-gray-400 text-sm mt-1">Forever free</p>
+            <ul class="mt-6 space-y-3 text-sm text-gray-600">
+              <li class="flex items-center gap-2">
+                <span class="text-green-500 font-bold">✓</span>Barcode scanning
+                (unlimited)
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-green-500 font-bold">✓</span>Manual food
+                logging
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-green-500 font-bold">✓</span>Water tracking
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-green-500 font-bold">✓</span>Apple Watch sync
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-green-500 font-bold">✓</span>10 AI scans/month
+              </li>
+            </ul>
+            <a
+              href="#"
+              class="mt-8 block text-center border border-gray-200 hover:border-blue-300 hover:text-blue-500 text-gray-700 font-semibold py-3 rounded-full transition"
+            >
+              Download Free
+            </a>
+          </div>
+
+          <!-- Pro -->
+          <div
+            class="bg-gradient-to-b from-blue-500 to-purple-600 rounded-2xl p-6 sm:p-8 text-white relative shadow-xl shadow-blue-200 md:-mt-4"
+          >
+            <span
+              class="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-400 text-yellow-900 text-xs font-bold px-4 py-1.5 rounded-full whitespace-nowrap"
+            >
+              ⭐ BEST VALUE
+            </span>
+            <h3 class="font-bold text-lg">Pro</h3>
+            <div class="mt-3">
+              <span class="text-4xl sm:text-5xl font-bold">$4.99</span>
+              <span class="text-blue-200 text-sm">/month</span>
+            </div>
+            <p class="text-blue-200 text-sm mt-1">or $39.99/year — save 33%</p>
+            <ul class="mt-6 space-y-3 text-sm">
+              <li class="flex items-center gap-2">
+                <span class="text-yellow-300 font-bold">✓</span>Everything in
+                Free
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-yellow-300 font-bold">✓</span>200 AI
+                scans/month
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-yellow-300 font-bold">✓</span>Priority support
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-yellow-300 font-bold">✓</span>Early access to
+                features
+              </li>
+            </ul>
+            <a
+              href="#"
+              class="mt-8 block text-center bg-white text-blue-600 hover:bg-blue-50 font-semibold py-3 rounded-full transition"
+            >
+              Get Pro
+            </a>
+          </div>
+
+          <!-- Lifetime -->
+          <div
+            class="bg-white border-2 border-orange-200 bg-orange-50 rounded-2xl p-6 sm:p-8 relative"
+          >
+            <span
+              class="absolute -top-4 left-1/2 -translate-x-1/2 bg-orange-400 text-white text-xs font-bold px-4 py-1.5 rounded-full whitespace-nowrap"
+            >
+              🔥 FOUNDER'S DEAL
+            </span>
+            <h3 class="font-bold text-lg">Lifetime</h3>
+            <div class="mt-3">
+              <span class="text-4xl sm:text-5xl font-bold">$59.99</span>
+            </div>
+            <p class="text-gray-500 text-sm mt-1">Pay once · Own forever</p>
+            <ul class="mt-6 space-y-3 text-sm text-gray-600">
+              <li class="flex items-center gap-2">
+                <span class="text-orange-500 font-bold">✓</span>Everything in
+                Pro
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-orange-500 font-bold">✓</span>200 AI
+                scans/month
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-orange-500 font-bold">✓</span>No recurring
+                charges
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-orange-500 font-bold">✓</span>Limited time
+                offer
+              </li>
+            </ul>
+            <a
+              href="#"
+              class="mt-8 block text-center bg-orange-400 hover:bg-orange-500 text-white font-semibold py-3 rounded-full transition"
+            >
+              Get Lifetime
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section
+      class="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-r from-blue-500 to-purple-600"
+    >
+      <div class="max-w-3xl mx-auto text-center text-white">
+        <h2 class="text-3xl sm:text-4xl font-bold">
+          Start tracking smarter today
+        </h2>
+        <p class="mt-4 text-blue-100 text-base sm:text-lg">
+          Join nutrition enthusiasts who trust MacroIt to reach their goals
+        </p>
+        <a
+          href="#"
+          class="mt-8 inline-flex items-center gap-2 bg-white text-blue-600 hover:bg-blue-50 font-semibold px-6 sm:px-8 py-4 rounded-full transition shadow-lg"
+        >
+          <svg
+            class="w-5 h-5 flex-shrink-0"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"
+            />
+          </svg>
+          Download Free on App Store
+        </a>
+        <p class="mt-4 text-blue-200 text-sm">No credit card required</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-10 sm:py-12 px-4 sm:px-6 bg-gray-900 text-gray-400">
+      <div class="max-w-6xl mx-auto">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center gap-6"
+        >
+          <div class="flex items-center gap-2">
+            <span class="text-xl">🍴</span>
+            <span class="text-white font-bold text-lg">MacroIt</span>
+          </div>
+          <div class="flex flex-wrap justify-center gap-4 sm:gap-6 text-sm">
+            <a href="privacy.html" class="hover:text-white transition"
+              >Privacy Policy</a
+            >
+            <a href="terms.html" class="hover:text-white transition"
+              >Terms of Use</a
+            >
+            <a href="support.html" class="hover:text-white transition"
+              >Support</a
+            >
+            <a
+              href="mailto:jsr.tech.dev@gmail.com"
+              class="hover:text-white transition"
+              >Contact</a
+            >
+          </div>
+          <a
+            href="mailto:jsr.tech.dev@gmail.com"
+            class="hover:text-white transition text-xl"
+            >✉️</a
+          >
+        </div>
+        <div
+          class="mt-8 pt-8 border-t border-gray-800 text-center text-xs sm:text-sm"
+        >
+          © 2026 JSR Tech Dev. All rights reserved.
+          <span class="mx-2">·</span>
+          Made with ❤️ for nutrition enthusiasts
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

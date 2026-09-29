@@ -1,234 +1,48 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>MacroIt — Track Macros. Eat Smarter.</title>
+
     <meta
       name="description"
+      data-i18n-content="meta.description"
       content="MacroIt uses AI-powered food detection, barcode scanning, and Apple Watch sync to make nutrition tracking effortless."
     />
+
     <meta property="og:title" content="MacroIt — Track Macros. Eat Smarter." />
+
     <meta
       property="og:description"
+      data-i18n-content="meta.ogDescription"
       content="AI-powered nutrition tracking for iOS and Apple Watch."
     />
+
     <meta property="og:type" content="website" />
+
     <link
       rel="icon"
       type="image/png"
       href="https://macroit.fit/assets/macroit-icon-1.png"
     />
+
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <style>
-      :root {
-        --brand-blue: #3b82f6;
-        --brand-dark: #1e293b;
-      }
 
-      * {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        font-family:
-          -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI",
-          Roboto, sans-serif;
-        color: #1e293b;
-        overflow-x: hidden;
-      }
-
-      /* Navbar */
-      .navbar {
-        backdrop-filter: blur(12px);
-        background: rgba(255, 255, 255, 0.85);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-      }
-
-      /* Hero */
-      .hero-gradient {
-        background: linear-gradient(
-          135deg,
-          #ebf4ff 0%,
-          #f0f7ff 30%,
-          #fafbff 60%,
-          #f5f3ff 100%
-        );
-      }
-
-      .hero-badge {
-        background: linear-gradient(135deg, #3b82f6, #6366f1);
-        animation: pulse-glow 2s ease-in-out infinite alternate;
-      }
-
-      @keyframes pulse-glow {
-        from {
-          box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
-        }
-        to {
-          box-shadow: 0 0 30px rgba(99, 102, 241, 0.4);
-        }
-      }
-
-      /* Feature cards */
-      .feature-card {
-        background: white;
-        border: 1px solid #f1f5f9;
-        border-radius: 16px;
-        padding: 28px;
-        transition: all 0.3s ease;
-      }
-      .feature-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
-        border-color: #e2e8f0;
-      }
-      .feature-icon {
-        font-size: 2rem;
-        margin-bottom: 12px;
-      }
-
-      /* Pro section */
-      .pro-section {
-        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-      }
-      .pro-card {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 16px;
-        padding: 28px;
-        transition: all 0.3s ease;
-      }
-      .pro-card:hover {
-        background: rgba(255, 255, 255, 0.08);
-        border-color: rgba(255, 255, 255, 0.2);
-        transform: translateY(-4px);
-      }
-
-      /* Watch section */
-      .watch-section {
-        background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%);
-      }
-
-      /* Pricing */
-      .pricing-card {
-        background: white;
-        border: 1px solid #e2e8f0;
-        border-radius: 20px;
-        padding: 32px;
-        transition: all 0.3s ease;
-      }
-      .pricing-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
-      }
-      .pricing-card.featured {
-        border-color: #3b82f6;
-        box-shadow: 0 8px 30px rgba(59, 130, 246, 0.15);
-        position: relative;
-      }
-
-      /* Screenshots */
-      .screenshot-row {
-        display: flex;
-        gap: 16px;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-      .screenshot-row img {
-        width: 160px;
-        border-radius: 20px;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-      }
-
-      /* Achievement section */
-      .achievement-section {
-        background: linear-gradient(
-          135deg,
-          #fffbeb 0%,
-          #fef3c7 30%,
-          #fde68a 100%
-        );
-      }
-      .achievement-card {
-        background: white;
-        border: 1px solid #fcd34d;
-        border-radius: 16px;
-        padding: 24px;
-        text-align: center;
-      }
-
-      .achievement-dedicated {
-        color: #ea580c;
-      }
-
-      .achievement-immortal {
-        color: #06b6d4;
-      }
-
-      .founders-deal {
-        background-color: #f97316;
-        color: white;
-      }
-
-      /* Pill badges */
-      .pill {
-        display: inline-block;
-        padding: 4px 12px;
-        border-radius: 9999px;
-        font-size: 0.75rem;
-        font-weight: 600;
-      }
-
-      /* CTA */
-      .cta-button {
-        background: linear-gradient(135deg, #3b82f6, #2563eb);
-        color: white;
-        padding: 14px 32px;
-        border-radius: 12px;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        display: inline-block;
-        text-decoration: none;
-      }
-      .cta-button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
-      }
-
-      .trust-badges {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-        justify-content: center;
-      }
-      .trust-badge {
-        background: white;
-        border: 1px solid #e2e8f0;
-        border-radius: 10px;
-        padding: 8px 16px;
-        font-size: 0.85rem;
-        font-weight: 500;
-      }
-
-      @media (max-width: 768px) {
-        .screenshot-row img {
-          width: 120px;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
 
     <!-- Teccio Website Analytics -->
-
     <script
       defer
       src="https://teccio.app/analytics.js"
       data-teccio-id="teccio_d74829370806077473a3e555d18a6e8e"
     ></script>
   </head>
+
   <body>
     <!-- Navbar -->
     <nav class="navbar fixed top-0 w-full z-50 py-3">
@@ -241,44 +55,119 @@
           />
           <span class="font-bold text-lg text-gray-900">MacroIt</span>
         </div>
+
         <div
           class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-600"
         >
-          <a href="#features" class="hover:text-blue-600 transition"
-            >Features</a
+          <a
+            href="#features"
+            class="hover:text-blue-600 transition"
+            data-i18n="nav.features"
           >
-          <a href="#achievements" class="hover:text-blue-600 transition"
-            >Achievements</a
+            Features
+          </a>
+
+          <a
+            href="#achievements"
+            class="hover:text-blue-600 transition"
+            data-i18n="nav.achievements"
           >
-          <a href="#pro-features" class="hover:text-blue-600 transition">Pro</a>
-          <a href="#social" class="hover:text-blue-600 transition">Friends</a>
-          <a href="#health" class="hover:text-blue-600 transition">Health</a>
-          <a href="#pricing" class="hover:text-blue-600 transition">Pricing</a>
+            Achievements
+          </a>
+
+          <a
+            href="#pro-features"
+            class="hover:text-blue-600 transition"
+            data-i18n="nav.pro"
+          >
+            Pro
+          </a>
+
+          <a
+            href="#social"
+            class="hover:text-blue-600 transition"
+            data-i18n="nav.friends"
+          >
+            Friends
+          </a>
+
+          <a
+            href="#health"
+            class="hover:text-blue-600 transition"
+            data-i18n="nav.health"
+          >
+            Health
+          </a>
+
+          <a
+            href="#pricing"
+            class="hover:text-blue-600 transition"
+            data-i18n="nav.pricing"
+          >
+            Pricing
+          </a>
+
           <a
             href="https://macroit.fit/support.html"
             class="hover:text-blue-600 transition"
-            >Support</a
+            data-i18n="nav.support"
           >
+            Support
+          </a>
         </div>
-        <a
-          href="https://apps.apple.com/app/id6781807960"
-          class="cta-button text-sm py-2 px-5"
-          >Download Free</a
-        >
+
+        <div class="flex items-center gap-3">
+          <div
+            class="flex items-center rounded-lg border border-gray-200 bg-white p-1 text-xs font-semibold"
+            aria-label="Language selector"
+          >
+            <button
+              type="button"
+              data-language="es"
+              class="px-2 py-1 rounded-md text-gray-600 hover:text-blue-600 transition"
+              aria-pressed="false"
+            >
+              ES
+            </button>
+
+            <span class="text-gray-300">|</span>
+
+            <button
+              type="button"
+              data-language="en"
+              class="px-2 py-1 rounded-md text-gray-600 hover:text-blue-600 transition"
+              aria-pressed="false"
+            >
+              EN
+            </button>
+          </div>
+
+          <a
+            href="https://apps.apple.com/app/id6781807960"
+            class="cta-button text-sm py-2 px-5"
+            data-i18n="nav.downloadFree"
+          >
+            Download Free
+          </a>
+        </div>
       </div>
     </nav>
 
     <!-- Spacer for fixed navbar -->
-    <div style="height: 70px"></div>
+    <div class="navbar-spacer"></div>
 
     <!-- Intro Offer Banner -->
     <div class="bg-blue-600 text-white text-center py-2 text-sm font-medium">
-      <a href="#pricing" class="hover:underline"
-        >🎉 Intro Offer — Get 3 months of Pro for $4.99 →</a
+      <a href="#pricing" class="hover:underline" data-i18n="banner.offer">
+        🎉 Intro Offer — Get 3 months of Pro for $4.99 →
+      </a>
+
+      <span
+        class="text-blue-200 ml-2 hidden sm:inline"
+        data-i18n="banner.platforms"
       >
-      <span class="text-blue-200 ml-2 hidden sm:inline"
-        >Available on iOS · Apple Watch · Home Screen Widgets</span
-      >
+        Available on iOS · Apple Watch · Home Screen Widgets
+      </span>
     </div>
 
     <!-- Hero -->
@@ -288,26 +177,38 @@
           <h1
             class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight"
           >
-            Track Macros.<br /><span class="text-blue-600">Eat Smarter.</span>
+            Track Macros.<br />
+            <span class="text-blue-600">Eat Smarter.</span>
           </h1>
-          <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+
+          <p
+            class="text-xl text-gray-600 mb-8 leading-relaxed"
+            data-i18n="hero.description"
+          >
             MacroIt uses AI-powered food detection, barcode scanning, and Apple
             Watch sync to make nutrition tracking effortless. Now with friends,
             in-app chat, health metrics, meal planner, achievements, and more.
           </p>
+
           <div class="flex flex-col sm:flex-row gap-4 justify-center mb-6">
             <a
               href="https://apps.apple.com/app/id6781807960"
               class="cta-button text-lg px-8 py-4"
-              >Download on App Store</a
+              data-i18n="hero.download"
             >
+              Download on App Store
+            </a>
+
             <a
               href="#features"
               class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold hover:border-blue-400 hover:text-blue-600 transition"
-              >See Features →</a
+              data-i18n="hero.features"
             >
+              See Features →
+            </a>
           </div>
-          <p class="text-sm text-gray-400">
+
+          <p class="text-sm text-gray-400" data-i18n="hero.freeNote">
             Free to download · No credit card required
           </p>
         </div>
@@ -319,6 +220,7 @@
             alt="MacroIt Dashboard"
             class="w-48 rounded-2xl shadow-xl"
           />
+
           <img
             src="https://macroit.fit/assets/screenshots/smartadd.jpeg?v=1"
             alt="AI Food Detection"
@@ -328,12 +230,29 @@
 
         <!-- Trust Badges -->
         <div class="trust-badges">
-          <div class="trust-badge">✓ AI-Powered Analysis</div>
-          <div class="trust-badge">✓ Apple Watch Support</div>
-          <div class="trust-badge">✓ Home Screen Widgets</div>
-          <div class="trust-badge">✓ HealthKit Integration</div>
-          <div class="trust-badge">✓ Privacy First</div>
-          <div class="trust-badge">✓ Net Calorie Tracking</div>
+          <div class="trust-badge" data-i18n="trust.ai">
+            ✓ AI-Powered Analysis
+          </div>
+
+          <div class="trust-badge" data-i18n="trust.watch">
+            ✓ Apple Watch Support
+          </div>
+
+          <div class="trust-badge" data-i18n="trust.widgets">
+            ✓ Home Screen Widgets
+          </div>
+
+          <div class="trust-badge" data-i18n="trust.healthkit">
+            ✓ HealthKit Integration
+          </div>
+
+          <div class="trust-badge" data-i18n="trust.privacy">
+            ✓ Privacy First
+          </div>
+
+          <div class="trust-badge" data-i18n="trust.netCalories">
+            ✓ Net Calorie Tracking
+          </div>
         </div>
       </div>
     </section>
@@ -342,10 +261,14 @@
     <section id="features" class="py-20 bg-white">
       <div class="max-w-6xl mx-auto px-4">
         <div class="text-center mb-14">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+            data-i18n="features.title"
+          >
             Everything you need to track nutrition
           </h2>
-          <p class="text-lg text-gray-500">
+
+          <p class="text-lg text-gray-500" data-i18n="features.subtitle">
             Powerful features designed to make healthy eating effortless
           </p>
         </div>
@@ -353,99 +276,192 @@
         <div class="grid md:grid-cols-3 gap-6">
           <div class="feature-card">
             <div class="feature-icon">🤖</div>
-            <h3 class="font-bold text-lg mb-2">AI Food Detection</h3>
-            <p class="text-gray-500 text-sm">
+            <h3 class="font-bold text-lg mb-2" data-i18n="features.ai.title">
+              AI Food Detection
+            </h3>
+            <p
+              class="text-gray-500 text-sm"
+              data-i18n="features.ai.description"
+            >
               Photograph your meal and instantly get accurate macro estimates
               powered by Claude AI. Add context notes for even better accuracy.
             </p>
           </div>
+
           <div class="feature-card">
             <div class="feature-icon">📱</div>
-            <h3 class="font-bold text-lg mb-2">Barcode Scanner</h3>
-            <p class="text-gray-500 text-sm">
+            <h3
+              class="font-bold text-lg mb-2"
+              data-i18n="features.barcode.title"
+            >
+              Barcode Scanner
+            </h3>
+            <p
+              class="text-gray-500 text-sm"
+              data-i18n="features.barcode.description"
+            >
               Scan any packaged food and get instant nutrition info from
               millions of products in the Open Food Facts database.
             </p>
           </div>
+
           <div class="feature-card">
             <div class="feature-icon">⌚</div>
             <h3 class="font-bold text-lg mb-2">Apple Watch</h3>
-            <p class="text-gray-500 text-sm">
+            <p
+              class="text-gray-500 text-sm"
+              data-i18n="features.watch.description"
+            >
               5 dedicated tabs — Macros, Health, Water, Quick Log, and
               Achievements — with 30+ live complications and real-time sync.
             </p>
           </div>
+
           <div class="feature-card">
             <div class="feature-icon">💧</div>
-            <h3 class="font-bold text-lg mb-2">Water Tracking</h3>
-            <p class="text-gray-500 text-sm">
+            <h3 class="font-bold text-lg mb-2" data-i18n="features.water.title">
+              Water Tracking
+            </h3>
+            <p
+              class="text-gray-500 text-sm"
+              data-i18n="features.water.description"
+            >
               Set daily water goals and track intake with quick-add buttons,
               weekly charts, and detailed history.
             </p>
           </div>
+
           <div class="feature-card">
             <div class="feature-icon">❤️</div>
-            <h3 class="font-bold text-lg mb-2">Health Monitoring</h3>
-            <p class="text-gray-500 text-sm">
+            <h3
+              class="font-bold text-lg mb-2"
+              data-i18n="features.health.title"
+            >
+              Health Monitoring
+            </h3>
+            <p
+              class="text-gray-500 text-sm"
+              data-i18n="features.health.description"
+            >
               Track heart rate, HRV, stress levels, sleep score, steps, and
               calories burned. Personal stress baseline adapts to your body over
               14 days.
             </p>
           </div>
+
           <div class="feature-card">
             <div class="feature-icon">🎯</div>
-            <h3 class="font-bold text-lg mb-2">Smart Goals</h3>
-            <p class="text-gray-500 text-sm">
+            <h3 class="font-bold text-lg mb-2" data-i18n="features.goals.title">
+              Smart Goals
+            </h3>
+            <p
+              class="text-gray-500 text-sm"
+              data-i18n="features.goals.description"
+            >
               Personalized calorie and macro goals calculated from your profile
               using the Mifflin-St Jeor formula with activity level adjustment.
             </p>
           </div>
+
           <div class="feature-card">
             <div class="feature-icon">🍳</div>
-            <h3 class="font-bold text-lg mb-2">Recipe Builder</h3>
-            <p class="text-gray-500 text-sm">
+            <h3
+              class="font-bold text-lg mb-2"
+              data-i18n="features.recipe.title"
+            >
+              Recipe Builder
+            </h3>
+            <p
+              class="text-gray-500 text-sm"
+              data-i18n="features.recipe.description"
+            >
               Create meals from ingredients with AI-powered macro analysis,
               search your food history, or enter manually. Auto-calculated per
               serving.
             </p>
           </div>
+
           <div class="feature-card">
             <div class="feature-icon">📊</div>
-            <h3 class="font-bold text-lg mb-2">Calendar Log</h3>
-            <p class="text-gray-500 text-sm">
+            <h3
+              class="font-bold text-lg mb-2"
+              data-i18n="features.calendar.title"
+            >
+              Calendar Log
+            </h3>
+            <p
+              class="text-gray-500 text-sm"
+              data-i18n="features.calendar.description"
+            >
               View daily, weekly and monthly summaries with detailed macro
               breakdowns, net calories, and water intake history.
             </p>
           </div>
+
           <div class="feature-card">
             <div class="feature-icon">📱</div>
-            <h3 class="font-bold text-lg mb-2">Home Screen Widgets</h3>
-            <p class="text-gray-500 text-sm">
+            <h3
+              class="font-bold text-lg mb-2"
+              data-i18n="features.widgets.title"
+            >
+              Home Screen Widgets
+            </h3>
+            <p
+              class="text-gray-500 text-sm"
+              data-i18n="features.widgets.description"
+            >
               9 beautiful widgets for your iPhone — calories ring, macro bars,
               water progress, vitals, activity, calorie balance, achievements,
               and daily overview.
             </p>
           </div>
+
           <div class="feature-card">
             <div class="feature-icon">🔔</div>
-            <h3 class="font-bold text-lg mb-2">Smart Reminders</h3>
-            <p class="text-gray-500 text-sm">
+            <h3
+              class="font-bold text-lg mb-2"
+              data-i18n="features.reminders.title"
+            >
+              Smart Reminders
+            </h3>
+            <p
+              class="text-gray-500 text-sm"
+              data-i18n="features.reminders.description"
+            >
               Automatic breakfast, lunch, dinner, and water reminders. Stress
               alerts when your HRV indicates elevated stress levels.
             </p>
           </div>
+
           <div class="feature-card">
             <div class="feature-icon">🌐</div>
-            <h3 class="font-bold text-lg mb-2">Bilingual</h3>
-            <p class="text-gray-500 text-sm">
+            <h3
+              class="font-bold text-lg mb-2"
+              data-i18n="features.bilingual.title"
+            >
+              Bilingual
+            </h3>
+            <p
+              class="text-gray-500 text-sm"
+              data-i18n="features.bilingual.description"
+            >
               Full English and Spanish support. AI responses automatically adapt
               to your device language.
             </p>
           </div>
+
           <div class="feature-card">
             <div class="feature-icon">📳</div>
-            <h3 class="font-bold text-lg mb-2">Haptic Feedback</h3>
-            <p class="text-gray-500 text-sm">
+            <h3
+              class="font-bold text-lg mb-2"
+              data-i18n="features.haptics.title"
+            >
+              Haptic Feedback
+            </h3>
+            <p
+              class="text-gray-500 text-sm"
+              data-i18n="features.haptics.description"
+            >
               Satisfying sound effects and haptic vibrations for logging,
               achievements, and AI completions. Fully customizable in settings.
             </p>
@@ -472,7 +488,7 @@
           />
           <img
             src="https://macroit.fit/assets/screenshots/meal-suggestion.jpeg?v=1"
-            alt="Calendar Log"
+            alt="Meal Suggestion"
           />
         </div>
       </div>
@@ -482,13 +498,24 @@
     <section id="achievements" class="py-20 achievement-section">
       <div class="max-w-6xl mx-auto px-4">
         <div class="text-center mb-14">
-          <span class="pill bg-yellow-100 text-yellow-700 mb-4"
-            >🏆 ACHIEVEMENTS</span
+          <span
+            class="pill bg-yellow-100 text-yellow-700 mb-4"
+            data-i18n="achievements.badge"
           >
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-4 mb-4">
+            🏆 ACHIEVEMENTS
+          </span>
+
+          <h2
+            class="text-3xl md:text-4xl font-bold text-gray-900 mt-4 mb-4"
+            data-i18n="achievements.title"
+          >
             Earn badges. Climb tiers. Share your wins.
           </h2>
-          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+
+          <p
+            class="text-lg text-gray-600 max-w-2xl mx-auto"
+            data-i18n="achievements.description"
+          >
             Track your consistency with 18 achievements across Nutrition,
             Health, and Water. Earn points daily, build streaks, and rise
             through monthly titles.
@@ -499,33 +526,67 @@
         <div class="flex flex-wrap justify-center gap-4 mb-12">
           <div class="achievement-card w-36">
             <div class="text-3xl mb-2">🌱</div>
-            <div class="font-bold text-green-600">Rookie</div>
+            <div
+              class="font-bold text-green-600"
+              data-i18n="achievements.rookie"
+            >
+              Rookie
+            </div>
             <div class="text-xs text-gray-400">0 pts</div>
           </div>
+
           <div class="achievement-card w-36">
             <div class="text-3xl mb-2">💪</div>
-            <div class="font-bold text-blue-600">Consistent</div>
+            <div
+              class="font-bold text-blue-600"
+              data-i18n="achievements.consistent"
+            >
+              Consistent
+            </div>
             <div class="text-xs text-gray-400">31+ pts</div>
           </div>
+
           <div class="achievement-card w-36">
             <div class="text-3xl mb-2">🔥</div>
-            <div class="font-bold achievement-dedicated">Dedicated</div>
+            <div
+              class="font-bold achievement-dedicated"
+              data-i18n="achievements.dedicated"
+            >
+              Dedicated
+            </div>
             <div class="text-xs text-gray-400">101+ pts</div>
           </div>
+
           <div class="achievement-card w-36">
             <div class="text-3xl mb-2">⭐</div>
-            <div class="font-bold text-purple-600">Elite</div>
+            <div
+              class="font-bold text-purple-600"
+              data-i18n="achievements.elite"
+            >
+              Elite
+            </div>
             <div class="text-xs text-gray-400">201+ pts</div>
           </div>
+
           <div class="achievement-card w-36">
             <div class="text-3xl mb-2">👑</div>
-            <div class="font-bold text-yellow-600">Legend</div>
+            <div
+              class="font-bold text-yellow-600"
+              data-i18n="achievements.legend"
+            >
+              Legend
+            </div>
             <div class="text-xs text-gray-400">401+ pts</div>
           </div>
 
-          <div class="achievement-card w-36" style="border-color: #06b6d4">
+          <div class="achievement-card achievement-card-immortal w-36">
             <div class="text-3xl mb-2">🏆</div>
-            <div class="font-bold achievement-immortal">Immortal</div>
+            <div
+              class="font-bold achievement-immortal"
+              data-i18n="achievements.immortal"
+            >
+              Immortal
+            </div>
             <div class="text-xs text-gray-400">801+ pts</div>
           </div>
         </div>
@@ -535,14 +596,13 @@
           <img
             src="https://macroit.fit/assets/screenshots/achievements.jpeg?v=1"
             alt="MacroIt Achievements View"
-            class="rounded-2xl shadow-lg"
-            style="max-height: 500px; width: auto"
+            class="content-screenshot rounded-2xl shadow-lg"
           />
+
           <img
             src="https://macroit.fit/assets/screenshots/achievement-card.jpg?v=1"
             alt="MacroIt Achievement Share Card"
-            class="rounded-2xl shadow-lg"
-            style="max-height: 500px; width: auto"
+            class="content-screenshot rounded-2xl shadow-lg"
           />
         </div>
 
@@ -550,24 +610,44 @@
         <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           <div class="bg-white rounded-2xl p-6 text-center shadow-sm">
             <div class="text-2xl mb-3">🗓️</div>
-            <h3 class="font-bold mb-1">Achievement Calendar</h3>
-            <p class="text-sm text-gray-500">
+            <h3 class="font-bold mb-1" data-i18n="achievements.calendar.title">
+              Achievement Calendar
+            </h3>
+            <p
+              class="text-sm text-gray-500"
+              data-i18n="achievements.calendar.description"
+            >
               Track earned badges by day, week, and month with an interactive
               calendar view.
             </p>
           </div>
+
           <div class="bg-white rounded-2xl p-6 text-center shadow-sm">
             <div class="text-2xl mb-3">📜</div>
-            <h3 class="font-bold mb-1">PDF Certificates</h3>
-            <p class="text-sm text-gray-500">
+            <h3
+              class="font-bold mb-1"
+              data-i18n="achievements.certificates.title"
+            >
+              PDF Certificates
+            </h3>
+            <p
+              class="text-sm text-gray-500"
+              data-i18n="achievements.certificates.description"
+            >
               Earn branded MacroIt milestone certificates: Champion, Pro,
               Legend, and Titan.
             </p>
           </div>
+
           <div class="bg-white rounded-2xl p-6 text-center shadow-sm">
             <div class="text-2xl mb-3">📤</div>
-            <h3 class="font-bold mb-1">Shareable Cards</h3>
-            <p class="text-sm text-gray-500">
+            <h3 class="font-bold mb-1" data-i18n="achievements.share.title">
+              Shareable Cards
+            </h3>
+            <p
+              class="text-sm text-gray-500"
+              data-i18n="achievements.share.description"
+            >
               Share your progress on social media with beautiful achievement
               summary cards.
             </p>
@@ -580,11 +660,24 @@
     <section id="social" class="py-20 bg-white">
       <div class="max-w-6xl mx-auto px-4">
         <div class="text-center mb-14">
-          <span class="pill bg-blue-100 text-blue-700 mb-4">👥 SOCIAL</span>
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-4 mb-4">
+          <span
+            class="pill bg-blue-100 text-blue-700 mb-4"
+            data-i18n="social.badge"
+          >
+            👥 SOCIAL
+          </span>
+
+          <h2
+            class="text-3xl md:text-4xl font-bold text-gray-900 mt-4 mb-4"
+            data-i18n="social.title"
+          >
             Compete with friends. Stay accountable.
           </h2>
-          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+
+          <p
+            class="text-lg text-gray-600 max-w-2xl mx-auto"
+            data-i18n="social.description"
+          >
             Share your progress, compare streaks, chat with friends, and nudge
             each other to stay on track. A mini community right inside MacroIt —
             completely free.
@@ -594,32 +687,55 @@
         <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
           <div class="feature-card text-center">
             <div class="text-3xl mb-3">🏆</div>
-            <h3 class="font-bold mb-1">Leaderboard</h3>
-            <p class="text-sm text-gray-500">
+            <h3 class="font-bold mb-1" data-i18n="social.leaderboard.title">
+              Leaderboard
+            </h3>
+            <p
+              class="text-sm text-gray-500"
+              data-i18n="social.leaderboard.description"
+            >
               Compare monthly points, calorie balance, and logging streaks with
               friends. See who's leading this month.
             </p>
           </div>
+
           <div class="feature-card text-center">
             <div class="text-3xl mb-3">👋</div>
-            <h3 class="font-bold mb-1">Nudges</h3>
-            <p class="text-sm text-gray-500">
+            <h3 class="font-bold mb-1" data-i18n="social.nudges.title">
+              Nudges
+            </h3>
+            <p
+              class="text-sm text-gray-500"
+              data-i18n="social.nudges.description"
+            >
               Send emoji reactions to motivate your friends. A quick 💪 or 🔥
               goes a long way when someone's on a streak.
             </p>
           </div>
+
           <div class="feature-card text-center">
             <div class="text-3xl mb-3">⚡</div>
-            <h3 class="font-bold mb-1">Activity Feed</h3>
-            <p class="text-sm text-gray-500">
+            <h3 class="font-bold mb-1" data-i18n="social.activity.title">
+              Activity Feed
+            </h3>
+            <p
+              class="text-sm text-gray-500"
+              data-i18n="social.activity.description"
+            >
               See when friends reach new titles, hit point milestones, or build
               impressive logging streaks.
             </p>
           </div>
+
           <div class="feature-card text-center">
             <div class="text-3xl mb-3">💬</div>
-            <h3 class="font-bold mb-1">In-App Chat</h3>
-            <p class="text-sm text-gray-500">
+            <h3 class="font-bold mb-1" data-i18n="social.chat.title">
+              In-App Chat
+            </h3>
+            <p
+              class="text-sm text-gray-500"
+              data-i18n="social.chat.description"
+            >
               Message your friends directly inside MacroIt. Share tips,
               celebrate wins, and keep each other motivated. Messages
               auto-expire after 30 days.
@@ -629,51 +745,80 @@
 
         <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
           <div class="feature-card">
-            <h3 class="font-bold text-lg mb-3">How it works</h3>
+            <h3 class="font-bold text-lg mb-3" data-i18n="social.how.title">
+              How it works
+            </h3>
+
             <ul class="space-y-2 text-sm text-gray-600">
               <li class="flex items-center gap-2">
-                <span class="text-blue-500">1.</span> Get your unique
-                6-character friend code
+                <span class="text-blue-500">1.</span>
+                <span data-i18n="social.how.one">
+                  Get your unique 6-character friend code
+                </span>
               </li>
+
               <li class="flex items-center gap-2">
-                <span class="text-blue-500">2.</span> Share it with friends who
-                use MacroIt
+                <span class="text-blue-500">2.</span>
+                <span data-i18n="social.how.two">
+                  Share it with friends who use MacroIt
+                </span>
               </li>
+
               <li class="flex items-center gap-2">
-                <span class="text-blue-500">3.</span> Accept friend requests and
-                start competing
+                <span class="text-blue-500">3.</span>
+                <span data-i18n="social.how.three">
+                  Accept friend requests and start competing
+                </span>
               </li>
+
               <li class="flex items-center gap-2">
-                <span class="text-blue-500">4.</span> Track each other's
-                progress on the leaderboard
+                <span class="text-blue-500">4.</span>
+                <span data-i18n="social.how.four">
+                  Track each other's progress on the leaderboard
+                </span>
               </li>
             </ul>
           </div>
+
           <div class="feature-card">
-            <h3 class="font-bold text-lg mb-3">Privacy first</h3>
+            <h3 class="font-bold text-lg mb-3" data-i18n="social.privacy.title">
+              Privacy first
+            </h3>
+
             <ul class="space-y-2 text-sm text-gray-600">
               <li class="flex items-center gap-2">
-                <span class="text-green-500">✓</span> Friends see your status,
-                never your exact food log
+                <span class="text-green-500">✓</span>
+                <span data-i18n="social.privacy.one">
+                  Friends see your status, never your exact food log
+                </span>
               </li>
+
               <li class="flex items-center gap-2">
-                <span class="text-green-500">✓</span> Only calorie balance
-                (deficit/surplus), not exact numbers
+                <span class="text-green-500">✓</span>
+                <span data-i18n="social.privacy.two">
+                  Only calorie balance (deficit/surplus), not exact numbers
+                </span>
               </li>
+
               <li class="flex items-center gap-2">
-                <span class="text-green-500">✓</span> No contact list access —
-                codes only
+                <span class="text-green-500">✓</span>
+                <span data-i18n="social.privacy.three">
+                  No contact list access — codes only
+                </span>
               </li>
+
               <li class="flex items-center gap-2">
-                <span class="text-green-500">✓</span> Remove friends anytime
-                with one tap
+                <span class="text-green-500">✓</span>
+                <span data-i18n="social.privacy.four">
+                  Remove friends anytime with one tap
+                </span>
               </li>
             </ul>
           </div>
         </div>
 
         <div class="text-center mt-10">
-          <p class="text-sm text-gray-400">
+          <p class="text-sm text-gray-400" data-i18n="social.free">
             Social features are completely free for all MacroIt users
           </p>
         </div>
@@ -683,8 +828,7 @@
           <img
             src="https://macroit.fit/assets/screenshots/friends.jpeg?v=1"
             alt="MacroIt Friends Leaderboard"
-            class="rounded-2xl shadow-lg"
-            style="max-height: 500px; width: auto"
+            class="content-screenshot rounded-2xl shadow-lg"
           />
         </div>
       </div>
@@ -694,13 +838,18 @@
     <section id="pro-features" class="pro-section py-20 text-white">
       <div class="max-w-6xl mx-auto px-4">
         <div class="text-center mb-14">
-          <span class="pill bg-blue-500 bg-opacity-20 text-blue-300 mb-4"
-            >PRO</span
+          <span class="pill bg-blue-500 bg-opacity-20 text-blue-300 mb-4">
+            PRO
+          </span>
+
+          <h2
+            class="text-3xl md:text-4xl font-bold mt-4 mb-4"
+            data-i18n="pro.title"
           >
-          <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-4">
             Unlock your full potential
           </h2>
-          <p class="text-lg text-gray-400">
+
+          <p class="text-lg text-gray-400" data-i18n="pro.description">
             Pro features designed for serious nutrition tracking and health
             optimization
           </p>
@@ -709,8 +858,10 @@
         <div class="grid md:grid-cols-2 gap-6">
           <div class="pro-card">
             <div class="text-2xl mb-3">✨</div>
-            <h3 class="font-bold text-lg mb-2">AI Meal Suggestions</h3>
-            <p class="text-gray-400 text-sm">
+            <h3 class="font-bold text-lg mb-2" data-i18n="pro.meals.title">
+              AI Meal Suggestions
+            </h3>
+            <p class="text-gray-400 text-sm" data-i18n="pro.meals.description">
               Get personalized meal ideas based on your remaining macros. AI
               suggests 4 meals with full nutrition info, prep time, and one-tap
               logging.
@@ -719,8 +870,13 @@
 
           <div class="pro-card">
             <div class="text-2xl mb-3">📅</div>
-            <h3 class="font-bold text-lg mb-2">Meal Planner</h3>
-            <p class="text-gray-400 text-sm">
+            <h3 class="font-bold text-lg mb-2" data-i18n="pro.planner.title">
+              Meal Planner
+            </h3>
+            <p
+              class="text-gray-400 text-sm"
+              data-i18n="pro.planner.description"
+            >
               Plan your meals ahead of time from presets or food history. Pro
               users get AI Auto-Plan — one tap fills your day to hit your macro
               goals. Plan up to 7 days ahead.
@@ -729,69 +885,113 @@
 
           <div class="pro-card">
             <div class="text-2xl mb-3">📊</div>
-            <h3 class="font-bold text-lg mb-2">AI Weekly Recap</h3>
-            <p class="text-gray-400 text-sm">
+            <h3 class="font-bold text-lg mb-2" data-i18n="pro.recap.title">
+              AI Weekly Recap
+            </h3>
+            <p class="text-gray-400 text-sm" data-i18n="pro.recap.description">
               Get a personalized weekly nutrition summary with highlights,
               patterns, consistency score, and actionable tips powered by AI.
             </p>
           </div>
+
           <div class="pro-card">
             <div class="text-2xl mb-3">📸</div>
-            <h3 class="font-bold text-lg mb-2">Food Photo Journal</h3>
-            <p class="text-gray-400 text-sm">
+            <h3 class="font-bold text-lg mb-2" data-i18n="pro.journal.title">
+              Food Photo Journal
+            </h3>
+            <p
+              class="text-gray-400 text-sm"
+              data-i18n="pro.journal.description"
+            >
               Visual diary of your AI-scanned meals. Browse by date, view macros
               per photo, and manage storage with compressed images.
             </p>
           </div>
+
           <div class="pro-card">
             <div class="text-2xl mb-3">📄</div>
-            <h3 class="font-bold text-lg mb-2">Nutrition Reports</h3>
-            <p class="text-gray-400 text-sm">
+            <h3
+              class="font-bold text-lg mb-2"
+              data-i18n="pro.nutritionReports.title"
+            >
+              Nutrition Reports
+            </h3>
+            <p
+              class="text-gray-400 text-sm"
+              data-i18n="pro.nutritionReports.description"
+            >
               Generate professional PDF reports with calorie trends, macro
               breakdown, BMI, net calories, and day highlights. Share with your
               trainer or nutritionist.
             </p>
           </div>
+
           <div class="pro-card">
             <div class="text-2xl mb-3">❤️‍🩹</div>
-            <h3 class="font-bold text-lg mb-2">Vitals Reports</h3>
-            <p class="text-gray-400 text-sm">
+            <h3 class="font-bold text-lg mb-2" data-i18n="pro.vitals.title">
+              Vitals Reports
+            </h3>
+            <p class="text-gray-400 text-sm" data-i18n="pro.vitals.description">
               Health PDF reports with heart rate trends, HRV analysis, sleep
               quality, stress distribution, activity summary, and daily
               breakdown tables.
             </p>
           </div>
+
           <div class="pro-card">
             <div class="text-2xl mb-3">📈</div>
-            <h3 class="font-bold text-lg mb-2">Advanced Insights</h3>
-            <p class="text-gray-400 text-sm">
+            <h3 class="font-bold text-lg mb-2" data-i18n="pro.insights.title">
+              Advanced Insights
+            </h3>
+            <p
+              class="text-gray-400 text-sm"
+              data-i18n="pro.insights.description"
+            >
               30/60/90 day analytics with calorie and macro trend charts,
               logging streaks, goal compliance rates, macro ratios, and
               highlights.
             </p>
           </div>
+
           <div class="pro-card">
             <div class="text-2xl mb-3">🏆</div>
-            <h3 class="font-bold text-lg mb-2">Achievement System</h3>
-            <p class="text-gray-400 text-sm">
+            <h3
+              class="font-bold text-lg mb-2"
+              data-i18n="pro.achievements.title"
+            >
+              Achievement System
+            </h3>
+            <p
+              class="text-gray-400 text-sm"
+              data-i18n="pro.achievements.description"
+            >
               18 badges, 10 lifetime milestones, monthly titles from Rookie to
               Immortal, shareable cards, and PDF certificates for MacroIt
               milestones.
             </p>
           </div>
+
           <div class="pro-card">
             <div class="text-2xl mb-3">📤</div>
-            <h3 class="font-bold text-lg mb-2">Data Export</h3>
-            <p class="text-gray-400 text-sm">
+            <h3 class="font-bold text-lg mb-2" data-i18n="pro.export.title">
+              Data Export
+            </h3>
+            <p class="text-gray-400 text-sm" data-i18n="pro.export.description">
               Export your food log, water history, and daily summaries as CSV
               files. Open in Excel, Google Sheets, or share with your healthcare
               provider.
             </p>
           </div>
+
           <div class="pro-card">
             <div class="text-2xl mb-3">⭐</div>
-            <h3 class="font-bold text-lg mb-2">Meal Presets</h3>
-            <p class="text-gray-400 text-sm">
+            <h3 class="font-bold text-lg mb-2" data-i18n="pro.presets.title">
+              Meal Presets
+            </h3>
+            <p
+              class="text-gray-400 text-sm"
+              data-i18n="pro.presets.description"
+            >
               Save your favorite meals as templates for one-tap logging.
               Organize by category, track usage, and build your personal meal
               library. Free users get 3, Pro gets unlimited.
@@ -805,13 +1005,24 @@
     <section id="health" class="py-20 bg-gray-50">
       <div class="max-w-6xl mx-auto px-4">
         <div class="text-center mb-14">
-          <span class="pill bg-pink-100 text-pink-700 mb-4"
-            >❤️ HEALTH METRICS</span
+          <span
+            class="pill bg-pink-100 text-pink-700 mb-4"
+            data-i18n="health.badge"
           >
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-4 mb-4">
+            ❤️ HEALTH METRICS
+          </span>
+
+          <h2
+            class="text-3xl md:text-4xl font-bold text-gray-900 mt-4 mb-4"
+            data-i18n="health.title"
+          >
             Your health, at a glance.
           </h2>
-          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+
+          <p
+            class="text-lg text-gray-600 max-w-2xl mx-auto"
+            data-i18n="health.description"
+          >
             Track key health metrics from your Apple Watch right inside MacroIt.
             See trends, monitor vitals, and stay informed about your body.
           </p>
@@ -820,29 +1031,47 @@
         <div class="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
           <div class="feature-card text-center">
             <div class="text-3xl mb-3">❤️</div>
-            <h3 class="font-bold mb-1">Heart Rate</h3>
-            <p class="text-sm text-gray-500">
+            <h3 class="font-bold mb-1" data-i18n="health.heart.title">
+              Heart Rate
+            </h3>
+            <p
+              class="text-sm text-gray-500"
+              data-i18n="health.heart.description"
+            >
               Current and resting BPM with HRV tracking
             </p>
           </div>
+
           <div class="feature-card text-center">
             <div class="text-3xl mb-3">🫁</div>
-            <h3 class="font-bold mb-1">Blood Oxygen</h3>
-            <p class="text-sm text-gray-500">
+            <h3 class="font-bold mb-1" data-i18n="health.oxygen.title">
+              Blood Oxygen
+            </h3>
+            <p
+              class="text-sm text-gray-500"
+              data-i18n="health.oxygen.description"
+            >
               SpO₂ readings synced from Apple Watch
             </p>
           </div>
+
           <div class="feature-card text-center">
             <div class="text-3xl mb-3">🌬️</div>
-            <h3 class="font-bold mb-1">Respiratory Rate</h3>
-            <p class="text-sm text-gray-500">
+            <h3 class="font-bold mb-1" data-i18n="health.respiratory.title">
+              Respiratory Rate
+            </h3>
+            <p
+              class="text-sm text-gray-500"
+              data-i18n="health.respiratory.description"
+            >
               Breathing rate tracked during sleep
             </p>
           </div>
+
           <div class="feature-card text-center">
             <div class="text-3xl mb-3">🏃</div>
             <h3 class="font-bold mb-1">VO2 Max</h3>
-            <p class="text-sm text-gray-500">
+            <p class="text-sm text-gray-500" data-i18n="health.vo2.description">
               Cardio fitness score for overall health
             </p>
           </div>
@@ -853,13 +1082,12 @@
           <img
             src="https://macroit.fit/assets/screenshots/profile-health.jpeg?v=2"
             alt="MacroIt Profile Health Metrics"
-            class="rounded-2xl shadow-lg"
-            style="max-height: 500px; width: auto"
+            class="content-screenshot rounded-2xl shadow-lg"
           />
         </div>
 
         <div class="text-center mt-8">
-          <p class="text-sm text-gray-400">
+          <p class="text-sm text-gray-400" data-i18n="health.watchRequirement">
             Requires Apple Watch Series 6 or later for Blood Oxygen
           </p>
         </div>
@@ -870,46 +1098,71 @@
     <section class="watch-section py-20">
       <div class="max-w-6xl mx-auto px-4">
         <div class="text-center mb-6">
-          <span class="pill bg-blue-50 text-blue-600 mb-4">⌚ Apple Watch</span>
+          <span class="pill bg-blue-50 text-blue-600 mb-4">
+            ⌚ Apple Watch
+          </span>
         </div>
+
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Track on your wrist.<br /><span class="text-blue-600"
-                >Stay on track.</span
-              >
+              <span data-i18n="watch.titleOne">Track on your wrist.</span>
+              <br />
+              <span class="text-blue-600" data-i18n="watch.titleTwo">
+                Stay on track.
+              </span>
             </h2>
-            <p class="text-gray-600 mb-8">
+
+            <p class="text-gray-600 mb-8" data-i18n="watch.description">
               MacroIt syncs seamlessly with your Apple Watch. Log water, check
               your macros, log meals from presets, and track achievements — all
               without touching your phone.
             </p>
+
             <ul class="space-y-3 text-gray-700">
               <li class="flex items-center gap-2">
-                <span class="text-green-500">✓</span> 6 dedicated tabs: Macros,
-                Health, Water, Quick Log, Achievements and Friends
+                <span class="text-green-500">✓</span>
+                <span data-i18n="watch.one">
+                  6 dedicated tabs: Macros, Health, Water, Quick Log,
+                  Achievements and Friends
+                </span>
               </li>
+
               <li class="flex items-center gap-2">
-                <span class="text-green-500">✓</span> 30+ watch face
-                complications
+                <span class="text-green-500">✓</span>
+                <span data-i18n="watch.two">
+                  30+ watch face complications
+                </span>
               </li>
+
               <li class="flex items-center gap-2">
-                <span class="text-green-500">✓</span> Quick meal logging from
-                presets on your wrist
+                <span class="text-green-500">✓</span>
+                <span data-i18n="watch.three">
+                  Quick meal logging from presets on your wrist
+                </span>
               </li>
+
               <li class="flex items-center gap-2">
-                <span class="text-green-500">✓</span> Heart rate, HRV, stress
-                level & sleep tracking
+                <span class="text-green-500">✓</span>
+                <span data-i18n="watch.four">
+                  Heart rate, HRV, stress level & sleep tracking
+                </span>
               </li>
+
               <li class="flex items-center gap-2">
-                <span class="text-green-500">✓</span> Independent HealthKit
-                updates every 15 minutes
+                <span class="text-green-500">✓</span>
+                <span data-i18n="watch.five">
+                  Independent HealthKit updates every 15 minutes
+                </span>
               </li>
+
               <li class="flex items-center gap-2">
-                <span class="text-green-500">✓</span> Real-time sync with iPhone
+                <span class="text-green-500">✓</span>
+                <span data-i18n="watch.six"> Real-time sync with iPhone </span>
               </li>
             </ul>
           </div>
+
           <div class="flex justify-center gap-6">
             <div class="text-center">
               <img
@@ -917,15 +1170,20 @@
                 alt="Apple Watch Water Log"
                 class="w-44 rounded-2xl shadow-lg mb-2"
               />
-              <p class="text-xs text-gray-400">Water Tracking</p>
+              <p class="text-xs text-gray-400" data-i18n="watch.water">
+                Water Tracking
+              </p>
             </div>
+
             <div class="text-center">
               <img
                 src="https://macroit.fit/assets/screenshots/watch-complications.png"
                 alt="Apple Watch Complications"
                 class="w-44 rounded-2xl shadow-lg mb-2"
               />
-              <p class="text-xs text-gray-400">Complications</p>
+              <p class="text-xs text-gray-400" data-i18n="watch.complications">
+                Complications
+              </p>
             </div>
           </div>
         </div>
@@ -936,10 +1194,14 @@
     <section id="pricing" class="py-20 bg-white">
       <div class="max-w-5xl mx-auto px-4">
         <div class="text-center mb-14">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+            data-i18n="pricing.title"
+          >
             Simple pricing
           </h2>
-          <p class="text-lg text-gray-500">
+
+          <p class="text-lg text-gray-500" data-i18n="pricing.subtitle">
             Start free. Upgrade when you're ready.
           </p>
         </div>
@@ -947,26 +1209,47 @@
         <div class="grid md:grid-cols-3 gap-6">
           <!-- Free -->
           <div class="pricing-card">
-            <h3 class="text-xl font-bold mb-1">Free</h3>
+            <h3 class="text-xl font-bold mb-1" data-i18n="pricing.free.name">
+              Free
+            </h3>
+
             <div class="text-4xl font-bold text-gray-900 mb-1">$0</div>
-            <p class="text-sm text-gray-400 mb-6">Forever free</p>
+
+            <p
+              class="text-sm text-gray-400 mb-6"
+              data-i18n="pricing.free.forever"
+            >
+              Forever free
+            </p>
+
             <ul class="space-y-2 text-sm text-gray-600 mb-8">
-              <li>✓ Barcode scanning (unlimited)</li>
-              <li>✓ Manual food logging</li>
-              <li>✓ Water tracking</li>
-              <li>✓ Apple Watch sync</li>
-              <li>✓ Home screen widgets</li>
-              <li>✓ Recipe Builder (manual & history)</li>
-              <li>✓ 10 AI scans/month</li>
-              <li>✓ 3 meal presets</li>
-              <li>✓ Meal Planner (tomorrow)</li>
-              <li>✓ Friends, Chat & Leaderboard</li>
+              <li data-i18n="pricing.free.barcode">
+                ✓ Barcode scanning (unlimited)
+              </li>
+              <li data-i18n="pricing.free.manual">✓ Manual food logging</li>
+              <li data-i18n="pricing.free.water">✓ Water tracking</li>
+              <li data-i18n="pricing.free.watch">✓ Apple Watch sync</li>
+              <li data-i18n="pricing.free.widgets">✓ Home screen widgets</li>
+              <li data-i18n="pricing.free.recipe">
+                ✓ Recipe Builder (manual & history)
+              </li>
+              <li data-i18n="pricing.free.ai">✓ 10 AI scans/month</li>
+              <li data-i18n="pricing.free.presets">✓ 3 meal presets</li>
+              <li data-i18n="pricing.free.planner">
+                ✓ Meal Planner (tomorrow)
+              </li>
+              <li data-i18n="pricing.free.social">
+                ✓ Friends, Chat & Leaderboard
+              </li>
             </ul>
+
             <a
               href="https://apps.apple.com/app/id6781807960"
               class="block text-center cta-button w-full"
-              >Download Free</a
+              data-i18n="pricing.free.button"
             >
+              Download Free
+            </a>
           </div>
 
           <!-- Pro -->
@@ -974,39 +1257,71 @@
             <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
               <span
                 class="bg-blue-600 text-white text-xs font-bold px-4 py-1 rounded-full"
-                >⭐ BEST VALUE</span
+                data-i18n="pricing.pro.bestValue"
               >
+                ⭐ BEST VALUE
+              </span>
             </div>
+
             <h3 class="text-xl font-bold mb-1">Pro</h3>
+
             <div class="text-4xl font-bold text-gray-900 mb-1">
               $4.99
-              <span class="text-lg font-normal text-gray-400">/month</span>
+              <span
+                class="text-lg font-normal text-gray-400"
+                data-i18n="pricing.pro.month"
+              >
+                /month
+              </span>
             </div>
-            <p class="text-sm text-gray-400 mb-1">or $39.99/year — save 33%</p>
-            <p class="text-sm text-blue-600 font-semibold mb-6">
+
+            <p class="text-sm text-gray-400 mb-1" data-i18n="pricing.pro.year">
+              or $39.99/year — save 33%
+            </p>
+
+            <p
+              class="text-sm text-blue-600 font-semibold mb-6"
+              data-i18n="pricing.pro.offer"
+            >
               🎉 Intro Offer: 3 months for $4.99
             </p>
+
             <ul class="space-y-2 text-sm text-gray-600 mb-8">
-              <li>✓ Everything in Free</li>
-              <li>✓ 200 AI scans/month</li>
-              <li>✓ AI Meal Suggestions</li>
-              <li>✓ AI Weekly Recap</li>
-              <li>✓ Recipe Builder (AI ingredients)</li>
-              <li>✓ Food Photo Journal</li>
-              <li>✓ Achievement System & Certificates</li>
-              <li>✓ Nutrition & Vitals Reports</li>
-              <li>✓ Advanced Insights (30/60/90 days)</li>
-              <li>✓ Data Export (CSV)</li>
-              <li>✓ Unlimited Meal Presets</li>
-              <li>✓ Meal Planner + AI Auto-Plan</li>
-              <li>✓ Friends, Chat & Leaderboard</li>
-              <li>✓ Priority support</li>
+              <li data-i18n="pricing.pro.everything">✓ Everything in Free</li>
+              <li data-i18n="pricing.pro.ai">✓ 200 AI scans/month</li>
+              <li data-i18n="pricing.pro.meals">✓ AI Meal Suggestions</li>
+              <li data-i18n="pricing.pro.recap">✓ AI Weekly Recap</li>
+              <li data-i18n="pricing.pro.recipe">
+                ✓ Recipe Builder (AI ingredients)
+              </li>
+              <li data-i18n="pricing.pro.journal">✓ Food Photo Journal</li>
+              <li data-i18n="pricing.pro.achievements">
+                ✓ Achievement System & Certificates
+              </li>
+              <li data-i18n="pricing.pro.reports">
+                ✓ Nutrition & Vitals Reports
+              </li>
+              <li data-i18n="pricing.pro.insights">
+                ✓ Advanced Insights (30/60/90 days)
+              </li>
+              <li data-i18n="pricing.pro.export">✓ Data Export (CSV)</li>
+              <li data-i18n="pricing.pro.presets">✓ Unlimited Meal Presets</li>
+              <li data-i18n="pricing.pro.planner">
+                ✓ Meal Planner + AI Auto-Plan
+              </li>
+              <li data-i18n="pricing.pro.social">
+                ✓ Friends, Chat & Leaderboard
+              </li>
+              <li data-i18n="pricing.pro.support">✓ Priority support</li>
             </ul>
+
             <a
               href="https://apps.apple.com/app/id6781807960"
               class="block text-center cta-button w-full"
-              >Get Pro</a
+              data-i18n="pricing.pro.button"
             >
+              Get Pro
+            </a>
           </div>
 
           <!-- Lifetime -->
@@ -1014,25 +1329,49 @@
             <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
               <span
                 class="founders-deal text-xs font-bold px-4 py-1 rounded-full"
+                data-i18n="pricing.lifetime.deal"
               >
                 🔥 FOUNDER'S DEAL
               </span>
             </div>
-            <h3 class="text-xl font-bold mb-1">Lifetime</h3>
+
+            <h3
+              class="text-xl font-bold mb-1"
+              data-i18n="pricing.lifetime.name"
+            >
+              Lifetime
+            </h3>
+
             <div class="text-4xl font-bold text-gray-900 mb-1">$59.99</div>
-            <p class="text-sm text-gray-400 mb-6">Pay once · Own forever</p>
+
+            <p
+              class="text-sm text-gray-400 mb-6"
+              data-i18n="pricing.lifetime.once"
+            >
+              Pay once · Own forever
+            </p>
+
             <ul class="space-y-2 text-sm text-gray-600 mb-8">
-              <li>✓ Everything in Pro</li>
-              <li>✓ 200 AI scans/month</li>
-              <li>✓ All Pro features forever</li>
-              <li>✓ No recurring charges</li>
-              <li>✓ Limited time offer</li>
+              <li data-i18n="pricing.lifetime.everything">
+                ✓ Everything in Pro
+              </li>
+              <li data-i18n="pricing.lifetime.ai">✓ 200 AI scans/month</li>
+              <li data-i18n="pricing.lifetime.forever">
+                ✓ All Pro features forever
+              </li>
+              <li data-i18n="pricing.lifetime.noRecurring">
+                ✓ No recurring charges
+              </li>
+              <li data-i18n="pricing.lifetime.limited">✓ Limited time offer</li>
             </ul>
+
             <a
               href="https://apps.apple.com/app/id6781807960"
               class="block text-center border-2 border-gray-300 text-gray-700 py-3 rounded-xl font-semibold hover:border-blue-400 transition w-full"
-              >Get Lifetime</a
+              data-i18n="pricing.lifetime.button"
             >
+              Get Lifetime
+            </a>
           </div>
         </div>
       </div>
@@ -1041,18 +1380,28 @@
     <!-- Final CTA -->
     <section class="py-20 hero-gradient">
       <div class="max-w-3xl mx-auto px-4 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+          data-i18n="cta.title"
+        >
           Start tracking smarter today
         </h2>
-        <p class="text-lg text-gray-500 mb-8">
+
+        <p class="text-lg text-gray-500 mb-8" data-i18n="cta.description">
           Join nutrition enthusiasts who trust MacroIt to reach their goals
         </p>
+
         <a
           href="https://apps.apple.com/app/id6781807960"
           class="cta-button text-lg px-10 py-4"
-          >Download Free on App Store</a
+          data-i18n="cta.button"
         >
-        <p class="text-sm text-gray-400 mt-4">No credit card required</p>
+          Download Free on App Store
+        </a>
+
+        <p class="text-sm text-gray-400 mt-4" data-i18n="cta.creditCard">
+          No credit card required
+        </p>
       </div>
     </section>
 
@@ -1070,32 +1419,46 @@
             />
             <span class="font-bold text-white">MacroIt</span>
           </div>
+
           <div class="flex gap-6 text-sm">
             <a
               href="https://macroit.fit/privacy.html"
               class="hover:text-white transition"
-              >Privacy Policy</a
+              data-i18n="footer.privacy"
             >
+              Privacy Policy
+            </a>
+
             <a
               href="https://macroit.fit/terms.html"
               class="hover:text-white transition"
-              >Terms of Use</a
+              data-i18n="footer.terms"
             >
+              Terms of Use
+            </a>
+
             <a
               href="https://macroit.fit/support.html"
               class="hover:text-white transition"
-              >Support</a
+              data-i18n="footer.support"
             >
+              Support
+            </a>
+
             <a
               href="mailto:jsr.tech.dev@gmail.com"
               class="hover:text-white transition"
-              >Contact</a
+              data-i18n="footer.contact"
             >
+              Contact
+            </a>
           </div>
+
           <div class="flex gap-4">
             <a
               href="https://www.facebook.com/profile.php?id=61592246203388"
               class="hover:text-white transition"
+              aria-label="Facebook"
             >
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path
@@ -1103,9 +1466,11 @@
                 />
               </svg>
             </a>
+
             <a
               href="https://www.instagram.com/macroit.fit"
               class="hover:text-white transition"
+              aria-label="Instagram"
             >
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path
@@ -1115,12 +1480,17 @@
             </a>
           </div>
         </div>
+
         <div class="text-center mt-8 text-sm text-gray-500">
-          © 2026 JSR Tech Dev. All rights reserved. · Made with ❤️ for nutrition
-          enthusiasts
-          <div>Made in 🇵🇷</div>
+          <span data-i18n="footer.copyright">
+            © 2026 JSR Tech Dev. All rights reserved. · Made with ❤️ for
+            nutrition enthusiasts
+          </span>
+          <div data-i18n="footer.madeIn">Made in 🇵🇷</div>
         </div>
       </div>
     </footer>
+
+    <script src="./assets/js/i18n.js"></script>
   </body>
 </html>

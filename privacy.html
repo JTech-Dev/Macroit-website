@@ -1,22 +1,30 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, 
-                   initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Privacy Policy — MacroIt</title>
+
     <link rel="icon" type="image/png" href="./assets/macroit-icon.png" />
+
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
+
   <body class="bg-white text-gray-900 antialiased">
     <!-- NAV -->
-    <nav class="border-b border-gray-100 px-6 py-4">
+    <nav class="border-b border-gray-100 px-4 sm:px-6 py-4">
       <div class="max-w-4xl mx-auto flex items-center justify-between">
+        <!-- Logo -->
         <div class="flex items-center gap-2">
-          <img src="./assets/macroit-icon.png" alt="MacroIt" class="w-8 h-8" />
+          <img
+            src="https://macroit.fit/assets/macroit-icon-2.png"
+            alt="MacroIt"
+            class="w-10 h-10"
+          />
+
           <a
             href="index.html"
             class="flex items-center gap-2 font-bold text-xl"
@@ -25,103 +33,232 @@
           </a>
         </div>
 
-        <a href="index.html" class="text-sm text-blue-500 hover:text-blue-600">
-          ← Back to Home
-        </a>
+        <!-- Language + Back -->
+        <div class="flex items-center gap-3">
+          <div
+            class="flex items-center rounded-lg border border-gray-200 bg-white p-1 text-xs font-semibold"
+            aria-label="Language selector"
+          >
+            <button
+              type="button"
+              data-language="es"
+              class="px-2 py-1 rounded-md text-gray-600 hover:text-blue-600 transition"
+              aria-pressed="false"
+            >
+              ES
+            </button>
+
+            <span class="text-gray-300">|</span>
+
+            <button
+              type="button"
+              data-language="en"
+              class="px-2 py-1 rounded-md text-gray-600 hover:text-blue-600 transition"
+              aria-pressed="false"
+            >
+              EN
+            </button>
+          </div>
+
+          <a
+            href="index.html"
+            class="text-sm text-blue-500 hover:text-blue-600 transition"
+            data-i18n="privacy.backToHome"
+          >
+            ← Back to Home
+          </a>
+        </div>
       </div>
     </nav>
 
     <!-- CONTENT -->
-    <main class="max-w-4xl mx-auto px-6 py-16">
-      <h1 class="text-4xl font-bold mb-2">Privacy Policy</h1>
-      <p class="text-gray-500 mb-12">Last updated: June 2026</p>
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+      <h1 class="text-4xl font-bold mb-2" data-i18n="privacy.title">
+        Privacy Policy
+      </h1>
+
+      <p class="text-gray-500 mb-12" data-i18n="privacy.updated">
+        Last updated: June 2026
+      </p>
 
       <div class="prose max-w-none space-y-8 text-gray-700 leading-relaxed">
+        <!-- Overview -->
         <section>
-          <h2 class="text-2xl font-bold text-gray-900 mb-4">Overview</h2>
-          <p>
+          <h2
+            class="text-2xl font-bold text-gray-900 mb-4"
+            data-i18n="privacy.overview.title"
+          >
+            Overview
+          </h2>
+
+          <p data-i18n="privacy.overview.text">
             MacroIt ("we", "us") is owned and operated by Joel Santos (JSR Tech
             Dev). We are committed to protecting your personal information and
             your right to privacy.
           </p>
         </section>
 
+        <!-- Information We Collect -->
         <section>
-          <h2 class="text-2xl font-bold text-gray-900 mb-4">
+          <h2
+            class="text-2xl font-bold text-gray-900 mb-4"
+            data-i18n="privacy.collect.title"
+          >
             Information We Collect
           </h2>
+
           <ul class="list-disc pl-6 space-y-2">
-            <li>Name and age (entered by you)</li>
-            <li>Body metrics: weight and height</li>
-            <li>Food and water logs</li>
-            <li>Health data via Apple HealthKit</li>
-            <li>Purchase history via Apple StoreKit</li>
+            <li data-i18n="privacy.collect.name">
+              Name and age (entered by you)
+            </li>
+
+            <li data-i18n="privacy.collect.metrics">
+              Body metrics: weight and height
+            </li>
+
+            <li data-i18n="privacy.collect.logs">Food and water logs</li>
+
+            <li data-i18n="privacy.collect.health">
+              Health data via Apple HealthKit
+            </li>
+
+            <li data-i18n="privacy.collect.purchases">
+              Purchase history via Apple StoreKit
+            </li>
           </ul>
         </section>
 
+        <!-- How We Use Your Information -->
         <section>
-          <h2 class="text-2xl font-bold text-gray-900 mb-4">
+          <h2
+            class="text-2xl font-bold text-gray-900 mb-4"
+            data-i18n="privacy.use.title"
+          >
             How We Use Your Information
           </h2>
+
           <ul class="list-disc pl-6 space-y-2">
-            <li>To calculate personalized nutrition goals</li>
-            <li>To sync data across your devices via iCloud</li>
-            <li>To process in-app purchases via Apple</li>
+            <li data-i18n="privacy.use.goals">
+              To calculate personalized nutrition goals
+            </li>
+
+            <li data-i18n="privacy.use.sync">
+              To sync data across your devices via iCloud
+            </li>
+
+            <li data-i18n="privacy.use.purchases">
+              To process in-app purchases via Apple
+            </li>
           </ul>
         </section>
 
+        <!-- Third Party Services -->
         <section>
-          <h2 class="text-2xl font-bold text-gray-900 mb-4">
+          <h2
+            class="text-2xl font-bold text-gray-900 mb-4"
+            data-i18n="privacy.thirdParty.title"
+          >
             Third Party Services
           </h2>
+
           <ul class="list-disc pl-6 space-y-2">
-            <li>Apple Sign In — authentication</li>
-            <li>Apple HealthKit — activity and health data</li>
-            <li>Apple CloudKit — data sync and storage</li>
-            <li>Anthropic Claude API — AI food analysis (photos not stored)</li>
-            <li>Open Food Facts — barcode nutrition data</li>
+            <li data-i18n="privacy.thirdParty.signIn">
+              Apple Sign In — authentication
+            </li>
+
+            <li data-i18n="privacy.thirdParty.healthKit">
+              Apple HealthKit — activity and health data
+            </li>
+
+            <li data-i18n="privacy.thirdParty.cloudKit">
+              Apple CloudKit — data sync and storage
+            </li>
+
+            <li data-i18n="privacy.thirdParty.claude">
+              Anthropic Claude API — AI food analysis (photos not stored)
+            </li>
+
+            <li data-i18n="privacy.thirdParty.openFoodFacts">
+              Open Food Facts — barcode nutrition data
+            </li>
           </ul>
         </section>
 
+        <!-- Data Storage -->
         <section>
-          <h2 class="text-2xl font-bold text-gray-900 mb-4">Data Storage</h2>
-          <p>
+          <h2
+            class="text-2xl font-bold text-gray-900 mb-4"
+            data-i18n="privacy.storage.title"
+          >
+            Data Storage
+          </h2>
+
+          <p data-i18n="privacy.storage.text">
             All personal data is stored in Apple iCloud and subject to Apple's
             Privacy Policy. We do not operate our own servers.
           </p>
         </section>
 
+        <!-- Camera and Photos -->
         <section>
-          <h2 class="text-2xl font-bold text-gray-900 mb-4">
+          <h2
+            class="text-2xl font-bold text-gray-900 mb-4"
+            data-i18n="privacy.camera.title"
+          >
             Camera and Photos
           </h2>
-          <p>
+
+          <p data-i18n="privacy.camera.text">
             Camera and photo library access is used only for AI food analysis.
             Photos are sent to Anthropic's API and are not stored by MacroIt.
           </p>
         </section>
 
+        <!-- In-App Purchases -->
         <section>
-          <h2 class="text-2xl font-bold text-gray-900 mb-4">
+          <h2
+            class="text-2xl font-bold text-gray-900 mb-4"
+            data-i18n="privacy.purchases.title"
+          >
             In-App Purchases
           </h2>
-          <p>
+
+          <p data-i18n="privacy.purchases.text">
             Purchases are processed by Apple. We do not store payment
             information. Subscriptions can be managed in your Apple ID settings.
           </p>
         </section>
 
+        <!-- Children's Privacy -->
         <section>
-          <h2 class="text-2xl font-bold text-gray-900 mb-4">
+          <h2
+            class="text-2xl font-bold text-gray-900 mb-4"
+            data-i18n="privacy.children.title"
+          >
             Children's Privacy
           </h2>
-          <p>MacroIt is not directed at children under 13 years of age.</p>
+
+          <p data-i18n="privacy.children.text">
+            MacroIt is not directed at children under 13 years of age.
+          </p>
         </section>
 
+        <!-- Contact -->
         <section>
-          <h2 class="text-2xl font-bold text-gray-900 mb-4">Contact</h2>
+          <h2
+            class="text-2xl font-bold text-gray-900 mb-4"
+            data-i18n="privacy.contact.title"
+          >
+            Contact
+          </h2>
+
           <p>
-            For privacy questions contact us at:<br />
+            <span data-i18n="privacy.contact.text">
+              For privacy questions contact us at:
+            </span>
+
+            <br />
+
             <a
               href="mailto:jsr.tech.dev@gmail.com"
               class="text-blue-500 hover:text-blue-600"
@@ -131,11 +268,16 @@
           </p>
         </section>
 
+        <!-- Changes -->
         <section>
-          <h2 class="text-2xl font-bold text-gray-900 mb-4">
+          <h2
+            class="text-2xl font-bold text-gray-900 mb-4"
+            data-i18n="privacy.changes.title"
+          >
             Changes to This Policy
           </h2>
-          <p>
+
+          <p data-i18n="privacy.changes.text">
             We may update this policy periodically. Continued use of the app
             constitutes acceptance of the updated policy.
           </p>
@@ -145,10 +287,12 @@
 
     <!-- FOOTER -->
     <footer
-      class="mt-20 py-8 px-6 border-t border-gray-100 text-center text-sm text-gray-400"
+      class="mt-20 py-8 px-4 sm:px-6 border-t border-gray-100 text-center text-sm text-gray-400"
     >
       © 2026 JSR Tech Dev ·
       <a href="index.html" class="hover:text-gray-600">MacroIt</a>
     </footer>
+
+    <script src="./assets/js/i18n.js"></script>
   </body>
 </html>

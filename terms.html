@@ -1,18 +1,30 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Terms of Use — MacroIt</title>
+
     <link rel="icon" type="image/png" href="./assets/macroit-icon.png" />
+
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
+
   <body class="bg-white text-gray-900 antialiased">
     <!-- NAV -->
     <nav class="border-b border-gray-100 px-4 sm:px-6 py-4">
       <div class="max-w-4xl mx-auto flex items-center justify-between">
+        <!-- Logo -->
         <div class="flex items-center gap-2">
-          <img src="./assets/macroit-icon.png" alt="MacroIt" class="w-8 h-8" />
+          <img
+            src="https://macroit.fit/assets/macroit-icon-2.png"
+            alt="MacroIt"
+            class="w-10 h-10"
+          />
+
           <a
             href="index.html"
             class="flex items-center gap-2 font-bold text-xl"
@@ -20,112 +32,217 @@
             MacroIt
           </a>
         </div>
-        <a
-          href="index.html"
-          class="text-sm text-blue-500 hover:text-blue-600 transition"
-        >
-          ← Back to Home
-        </a>
+
+        <!-- Language + Back -->
+        <div class="flex items-center gap-3">
+          <div
+            class="flex items-center rounded-lg border border-gray-200 bg-white p-1 text-xs font-semibold"
+            aria-label="Language selector"
+          >
+            <button
+              type="button"
+              data-language="es"
+              class="px-2 py-1 rounded-md text-gray-600 hover:text-blue-600 transition"
+              aria-pressed="false"
+            >
+              ES
+            </button>
+
+            <span class="text-gray-300">|</span>
+
+            <button
+              type="button"
+              data-language="en"
+              class="px-2 py-1 rounded-md text-gray-600 hover:text-blue-600 transition"
+              aria-pressed="false"
+            >
+              EN
+            </button>
+          </div>
+
+          <a
+            href="index.html"
+            class="text-sm text-blue-500 hover:text-blue-600 transition"
+            data-i18n="terms.backToHome"
+          >
+            ← Back to Home
+          </a>
+        </div>
       </div>
     </nav>
 
     <!-- CONTENT -->
     <main class="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
-      <h1 class="text-3xl sm:text-4xl font-bold mb-2">Terms of Use</h1>
-      <p class="text-gray-500 mb-10">Last updated: June 2026</p>
+      <h1 class="text-3xl sm:text-4xl font-bold mb-2" data-i18n="terms.title">
+        Terms of Use
+      </h1>
+
+      <p class="text-gray-500 mb-10" data-i18n="terms.updated">
+        Last updated: June 2026
+      </p>
 
       <div class="space-y-10 text-gray-700 leading-relaxed">
+        <!-- Acceptance -->
         <section>
-          <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
+          <h2
+            class="text-xl sm:text-2xl font-bold text-gray-900 mb-3"
+            data-i18n="terms.acceptance.title"
+          >
             Acceptance of Terms
           </h2>
-          <p>
+
+          <p data-i18n="terms.acceptance.text">
             By downloading or using MacroIt you agree to these terms. If you do
             not agree, do not use the app.
           </p>
         </section>
 
+        <!-- Use of the App -->
         <section>
-          <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
+          <h2
+            class="text-xl sm:text-2xl font-bold text-gray-900 mb-3"
+            data-i18n="terms.use.title"
+          >
             Use of the App
           </h2>
+
           <ul class="list-disc pl-6 space-y-2">
-            <li>MacroIt is for personal use only</li>
-            <li>You must be 13 years or older to use the app</li>
-            <li>Do not reverse engineer or modify the app</li>
-            <li>
+            <li data-i18n="terms.use.personal">
+              MacroIt is for personal use only
+            </li>
+
+            <li data-i18n="terms.use.age">
+              You must be 13 years or older to use the app
+            </li>
+
+            <li data-i18n="terms.use.reverseEngineer">
+              Do not reverse engineer or modify the app
+            </li>
+
+            <li data-i18n="terms.use.commercial">
               Do not use the app for commercial purposes without written
               permission
             </li>
           </ul>
         </section>
 
+        <!-- Nutritional Information -->
         <section>
-          <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
+          <h2
+            class="text-xl sm:text-2xl font-bold text-gray-900 mb-3"
+            data-i18n="terms.nutrition.title"
+          >
             Nutritional Information
           </h2>
+
           <ul class="list-disc pl-6 space-y-2">
-            <li>
+            <li data-i18n="terms.nutrition.estimated">
               All nutritional data is estimated and may not be 100% accurate
             </li>
-            <li>AI food analysis is an estimate based on visual recognition</li>
-            <li>MacroIt is not a medical device</li>
-            <li>
+
+            <li data-i18n="terms.nutrition.aiEstimate">
+              AI food analysis is an estimate based on visual recognition
+            </li>
+
+            <li data-i18n="terms.nutrition.notMedicalDevice">
+              MacroIt is not a medical device
+            </li>
+
+            <li data-i18n="terms.nutrition.professional">
               Always consult a healthcare professional for medical or dietary
               advice
             </li>
-            <li>
+
+            <li data-i18n="terms.nutrition.notSubstitute">
               Do not use MacroIt as a substitute for professional medical advice
             </li>
           </ul>
         </section>
 
+        <!-- In-App Purchases -->
         <section>
-          <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
+          <h2
+            class="text-xl sm:text-2xl font-bold text-gray-900 mb-3"
+            data-i18n="terms.purchases.title"
+          >
             In-App Purchases
           </h2>
+
           <ul class="list-disc pl-6 space-y-2">
-            <li>Purchases are processed by Apple</li>
-            <li>
+            <li data-i18n="terms.purchases.apple">
+              Purchases are processed by Apple
+            </li>
+
+            <li data-i18n="terms.purchases.autoRenew">
               Subscriptions auto-renew unless cancelled at least 24 hours before
               renewal date
             </li>
-            <li>Manage subscriptions in your Apple ID Settings</li>
-            <li>Refunds are handled by Apple per their refund policy</li>
-            <li>Lifetime purchases are non-refundable after 14 days</li>
+
+            <li data-i18n="terms.purchases.manage">
+              Manage subscriptions in your Apple ID Settings
+            </li>
+
+            <li data-i18n="terms.purchases.refunds">
+              Refunds are handled by Apple per their refund policy
+            </li>
+
+            <li data-i18n="terms.purchases.lifetime">
+              Lifetime purchases are non-refundable after 14 days
+            </li>
           </ul>
         </section>
 
+        <!-- AI Food Analysis -->
         <section>
-          <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
+          <h2
+            class="text-xl sm:text-2xl font-bold text-gray-900 mb-3"
+            data-i18n="terms.ai.title"
+          >
             AI Food Analysis
           </h2>
+
           <ul class="list-disc pl-6 space-y-2">
-            <li>
+            <li data-i18n="terms.ai.claude">
               Photos sent for AI analysis are processed by Anthropic's Claude
               API
             </li>
-            <li>Photos are not stored by MacroIt</li>
-            <li>Results are estimates only and should be verified</li>
+
+            <li data-i18n="terms.ai.notStored">
+              Photos are not stored by MacroIt
+            </li>
+
+            <li data-i18n="terms.ai.estimates">
+              Results are estimates only and should be verified
+            </li>
           </ul>
         </section>
 
+        <!-- Intellectual Property -->
         <section>
-          <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
+          <h2
+            class="text-xl sm:text-2xl font-bold text-gray-900 mb-3"
+            data-i18n="terms.ip.title"
+          >
             Intellectual Property
           </h2>
-          <p>
+
+          <p data-i18n="terms.ip.text">
             MacroIt and all its content are owned by JSR Tech Dev. All rights
             reserved. You may not copy, modify, or distribute any part of the
             app without written permission.
           </p>
         </section>
 
+        <!-- Limitation of Liability -->
         <section>
-          <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
+          <h2
+            class="text-xl sm:text-2xl font-bold text-gray-900 mb-3"
+            data-i18n="terms.liability.title"
+          >
             Limitation of Liability
           </h2>
-          <p>
+
+          <p data-i18n="terms.liability.text">
             MacroIt is provided "as-is" without warranties of any kind. JSR Tech
             Dev is not liable for any damages arising from use of the app,
             including but not limited to health outcomes based on nutritional
@@ -133,22 +250,37 @@
           </p>
         </section>
 
+        <!-- Changes -->
         <section>
-          <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
+          <h2
+            class="text-xl sm:text-2xl font-bold text-gray-900 mb-3"
+            data-i18n="terms.changes.title"
+          >
             Changes to Terms
           </h2>
-          <p>
+
+          <p data-i18n="terms.changes.text">
             We may update these terms periodically. Continued use of the app
             constitutes acceptance of the updated terms.
           </p>
         </section>
 
+        <!-- Contact -->
         <section>
-          <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
+          <h2
+            class="text-xl sm:text-2xl font-bold text-gray-900 mb-3"
+            data-i18n="terms.contact.title"
+          >
             Contact
           </h2>
+
           <p>
-            Questions about these terms?<br />
+            <span data-i18n="terms.contact.text">
+              Questions about these terms?
+            </span>
+
+            <br />
+
             <a
               href="mailto:jsr.tech.dev@gmail.com"
               class="text-blue-500 hover:text-blue-600 transition"
@@ -165,15 +297,34 @@
       class="mt-16 py-8 px-4 sm:px-6 border-t border-gray-100 text-center text-sm text-gray-400"
     >
       <div class="flex flex-wrap justify-center gap-4 mb-4">
-        <a href="index.html" class="hover:text-gray-600 transition">Home</a>
-        <a href="privacy.html" class="hover:text-gray-600 transition"
-          >Privacy Policy</a
+        <a
+          href="index.html"
+          class="hover:text-gray-600 transition"
+          data-i18n="terms.footer.home"
         >
-        <a href="support.html" class="hover:text-gray-600 transition"
-          >Support</a
+          Home
+        </a>
+
+        <a
+          href="privacy.html"
+          class="hover:text-gray-600 transition"
+          data-i18n="terms.footer.privacy"
         >
+          Privacy Policy
+        </a>
+
+        <a
+          href="support.html"
+          class="hover:text-gray-600 transition"
+          data-i18n="terms.footer.support"
+        >
+          Support
+        </a>
       </div>
+
       © 2026 JSR Tech Dev · MacroIt
     </footer>
+
+    <script src="./assets/js/i18n.js"></script>
   </body>
 </html>

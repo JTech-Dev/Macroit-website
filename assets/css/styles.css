@@ -1,0 +1,205 @@
+:root {
+  --brand-blue: #3b82f6;
+  --brand-dark: #1e293b;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto,
+    sans-serif;
+  color: #1e293b;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.navbar-spacer {
+  height: 70px;
+}
+
+/* Hero */
+.hero-gradient {
+  background: linear-gradient(
+    135deg,
+    #ebf4ff 0%,
+    #f0f7ff 30%,
+    #fafbff 60%,
+    #f5f3ff 100%
+  );
+}
+
+.hero-badge {
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  animation: pulse-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-glow {
+  from {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+  to {
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.4);
+  }
+}
+
+/* Feature cards */
+.feature-card {
+  background: white;
+  border: 1px solid #f1f5f9;
+  border-radius: 16px;
+  padding: 28px;
+  transition: all 0.3s ease;
+}
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  border-color: #e2e8f0;
+}
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+/* Pro section */
+.pro-section {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+.pro-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 28px;
+  transition: all 0.3s ease;
+}
+.pro-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+}
+
+/* Watch section */
+.watch-section {
+  background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%);
+}
+
+/* Pricing */
+.pricing-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 32px;
+  transition: all 0.3s ease;
+}
+.pricing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+.pricing-card.featured {
+  border-color: #3b82f6;
+  box-shadow: 0 8px 30px rgba(59, 130, 246, 0.15);
+  position: relative;
+}
+
+/* Screenshots */
+.screenshot-row {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.screenshot-row img {
+  width: 160px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Achievement section */
+.achievement-section {
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 30%, #fde68a 100%);
+}
+.achievement-card {
+  background: white;
+  border: 1px solid #fcd34d;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+}
+
+.achievement-dedicated {
+  color: #ea580c;
+}
+
+.achievement-immortal {
+  color: #06b6d4;
+}
+
+.founders-deal {
+  background-color: #f97316;
+  color: white;
+}
+
+/* Pill badges */
+.pill {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* CTA */
+.cta-button {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+}
+
+.trust-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+.trust-badge {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .screenshot-row img {
+    width: 120px;
+  }
+}
+
+/* Content screenshots */
+.content-screenshot {
+  max-height: 500px;
+  width: auto;
+}
+
+/* Immortal achievement tier */
+.achievement-card-immortal {
+  border-color: #06b6d4;
+}

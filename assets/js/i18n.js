@@ -14,7 +14,7 @@ const translations = {
     "nav.support": "Support",
     "nav.downloadFree": "Download Free",
 
-    "banner.offer": "🎉 Intro Offer — Get 3 months of Pro for $4.99 →",
+    "banner.offer": "Intro Offer — Get your first 3 months of Pro for $7.99 →",
     "banner.platforms": "Available on iOS · Apple Watch · Home Screen Widgets",
 
     "hero.description":
@@ -43,7 +43,7 @@ const translations = {
       "Scan any packaged food and get instant nutrition info from millions of products in the Open Food Facts database.",
 
     "features.watch.description":
-      "5 dedicated tabs — Macros, Health, Water, Quick Log, and Achievements — with 30+ live complications and real-time sync.",
+      "6 dedicated tabs — Macros, Health, Water, Quick Log, Achievements, and Friends — with 30+ live complications and real-time sync.",
 
     "features.water.title": "Water Tracking",
     "features.water.description":
@@ -237,10 +237,15 @@ const translations = {
     "pricing.free.social": "✓ Friends, Chat & Leaderboard",
     "pricing.free.button": "Download Free",
 
-    "pricing.pro.bestValue": "⭐ BEST VALUE",
+    "pricing.monthly.name": "Pro Monthly",
+
+    "pricing.yearly.name": "Pro Yearly",
+    "pricing.yearly.bestValue": "⭐ BEST VALUE",
+    "pricing.yearly.period": "/year",
+    "pricing.yearly.savings": "Save 37% compared to monthly",
+
     "pricing.pro.month": "/month",
-    "pricing.pro.year": "or $39.99/year — save 33%",
-    "pricing.pro.offer": "🎉 Intro Offer: 3 months for $4.99",
+    "pricing.pro.offer": "Intro Offer: first 3 months for $7.99",
     "pricing.pro.everything": "✓ Everything in Free",
     "pricing.pro.ai": "✓ 200 AI scans/month",
     "pricing.pro.meals": "✓ AI Meal Suggestions",
@@ -256,16 +261,6 @@ const translations = {
     "pricing.pro.social": "✓ Friends, Chat & Leaderboard",
     "pricing.pro.support": "✓ Priority support",
     "pricing.pro.button": "Get Pro",
-
-    "pricing.lifetime.deal": "🔥 FOUNDER'S DEAL",
-    "pricing.lifetime.name": "Lifetime",
-    "pricing.lifetime.once": "Pay once · Own forever",
-    "pricing.lifetime.everything": "✓ Everything in Pro",
-    "pricing.lifetime.ai": "✓ 200 AI scans/month",
-    "pricing.lifetime.forever": "✓ All Pro features forever",
-    "pricing.lifetime.noRecurring": "✓ No recurring charges",
-    "pricing.lifetime.limited": "✓ Limited time offer",
-    "pricing.lifetime.button": "Get Lifetime",
 
     "cta.title": "Start tracking smarter today",
     "cta.description":
@@ -288,8 +283,9 @@ const translations = {
     "support.faq.heading": "Frequently Asked Questions",
 
     "support.faq.restorePurchase.question": "How do I restore my Pro purchase?",
+
     "support.faq.restorePurchase.answer":
-      'Go to Profile tab → tap the subscription card → tap "Restore Purchases". Your Pro access will be restored automatically if you previously purchased it with the same Apple ID.',
+      'Go to Settings → Personal Profile → tap the subscription card → tap "Restore Purchases". Your Pro access will be restored automatically if you previously purchased it with the same Apple ID.',
 
     "support.faq.syncAppleWatch.question": "How do I sync with Apple Watch?",
     "support.faq.syncAppleWatch.answer":
@@ -301,7 +297,7 @@ const translations = {
 
     "support.faq.resetGoals.question": "How do I reset my nutrition goals?",
     "support.faq.resetGoals.answer":
-      'Go to Profile tab → Daily Goals → tap "Edit Daily Goals". You can manually adjust each macro or use the Smart Recalculate feature to recalculate based on your current profile.',
+      'Go to Settings → Personal Profile → Daily Goals → tap "Edit Daily Goals". You can manually adjust each macro or use the Smart Recalculate feature to recalculate based on your current profile.',
 
     "support.faq.lowConfidence.question": "Why is my AI scan confidence low?",
     "support.faq.lowConfidence.answer":
@@ -310,7 +306,7 @@ const translations = {
     "support.faq.cancelSubscription.question":
       "How do I cancel my subscription?",
     "support.faq.cancelSubscription.answer":
-      'Subscriptions are managed through Apple. Go to iPhone Settings → Apple ID → Subscriptions → MacroIt → Cancel Subscription. You can also tap "Manage Subscription" in the Profile tab.',
+      'Subscriptions are managed through Apple. Go to iPhone Settings → Apple ID → Subscriptions → MacroIt → Cancel Subscription. You can also tap "Manage Subscription" in Settings → Personal Profile.',
 
     "support.faq.dataLoss.question": "Will I lose my data if I delete the app?",
     "support.faq.dataLoss.answer":
@@ -463,7 +459,7 @@ const translations = {
     "nav.downloadFree": "Descargar gratis",
 
     "banner.offer":
-      "🎉 Oferta de lanzamiento — Obtén 3 meses de Pro por $4.99 →",
+      "Oferta introductoria — Obtén tus primeros 3 meses de Pro por $7.99 →",
     "banner.platforms":
       "Disponible en iOS · Apple Watch · Widgets de pantalla de inicio",
 
@@ -493,7 +489,7 @@ const translations = {
       "Escanea cualquier alimento empacado y obtén información nutricional al instante de millones de productos en la base de datos de Open Food Facts.",
 
     "features.watch.description":
-      "5 pestañas dedicadas — Macros, Salud, Agua, Registro rápido y Logros — con más de 30 complicaciones en vivo y sincronización en tiempo real.",
+      "6 pestañas dedicadas — Macros, Salud, Agua, Registro rápido, Logros y Amigos — con más de 30 complicaciones en vivo y sincronización en tiempo real.",
 
     "features.water.title": "Seguimiento de agua",
     "features.water.description":
@@ -695,10 +691,15 @@ const translations = {
     "pricing.free.social": "✓ Amigos, Chat y Clasificación",
     "pricing.free.button": "Descargar gratis",
 
-    "pricing.pro.bestValue": "⭐ MEJOR VALOR",
+    "pricing.monthly.name": "Pro Mensual",
+
+    "pricing.yearly.name": "Pro Anual",
+    "pricing.yearly.bestValue": "⭐ MEJOR VALOR",
+    "pricing.yearly.period": "/año",
+    "pricing.yearly.savings": "Ahorra 37% comparado con el plan mensual",
+
     "pricing.pro.month": "/mes",
-    "pricing.pro.year": "o $39.99/año — ahorra 33%",
-    "pricing.pro.offer": "🎉 Oferta de lanzamiento: 3 meses por $4.99",
+    "pricing.pro.offer": "Oferta introductoria: tus primeros 3 meses por $7.99",
     "pricing.pro.everything": "✓ Todo lo incluido en Gratis",
     "pricing.pro.ai": "✓ 200 análisis con IA/mes",
     "pricing.pro.meals": "✓ Sugerencias de comidas con IA",
@@ -714,16 +715,6 @@ const translations = {
     "pricing.pro.social": "✓ Amigos, Chat y Clasificación",
     "pricing.pro.support": "✓ Soporte prioritario",
     "pricing.pro.button": "Obtener Pro",
-
-    "pricing.lifetime.deal": "🔥 OFERTA DE FUNDADOR",
-    "pricing.lifetime.name": "De por vida",
-    "pricing.lifetime.once": "Paga una vez · Disfrútalo para siempre",
-    "pricing.lifetime.everything": "✓ Todo lo incluido en Pro",
-    "pricing.lifetime.ai": "✓ 200 análisis con IA/mes",
-    "pricing.lifetime.forever": "✓ Todas las funciones Pro para siempre",
-    "pricing.lifetime.noRecurring": "✓ Sin pagos recurrentes",
-    "pricing.lifetime.limited": "✓ Oferta por tiempo limitado",
-    "pricing.lifetime.button": "Obtener de por vida",
 
     "cta.title": "Empieza a llevar un mejor control desde hoy",
     "cta.description":
@@ -747,7 +738,7 @@ const translations = {
 
     "support.faq.restorePurchase.question": "¿Cómo restauro mi compra de Pro?",
     "support.faq.restorePurchase.answer":
-      'Ve a la pestaña Perfil → toca la tarjeta de suscripción → toca "Restaurar compras". Tu acceso a Pro se restaurará automáticamente si realizaste la compra anteriormente con el mismo Apple ID.',
+      'Ve a Ajustes → Perfil personal → toca la tarjeta de suscripción → toca "Restaurar compras". Tu acceso a Pro se restaurará automáticamente si realizaste la compra anteriormente con el mismo Apple ID.',
 
     "support.faq.syncAppleWatch.question":
       "¿Cómo sincronizo MacroIt con Apple Watch?",
@@ -761,7 +752,7 @@ const translations = {
     "support.faq.resetGoals.question":
       "¿Cómo restablezco mis metas de nutrición?",
     "support.faq.resetGoals.answer":
-      'Ve a la pestaña Perfil → Metas diarias → toca "Editar metas diarias". Puedes ajustar cada macro manualmente o usar la función de recálculo inteligente para volver a calcular tus metas según tu perfil actual.',
+      'Ve a Ajustes → Perfil personal → Metas diarias → toca "Editar metas diarias". Puedes ajustar cada macro manualmente o usar la función de recálculo inteligente para volver a calcular tus metas según tu perfil actual.',
 
     "support.faq.lowConfidence.question":
       "¿Por qué mi análisis con IA tiene poca confianza?",
@@ -770,7 +761,7 @@ const translations = {
 
     "support.faq.cancelSubscription.question": "¿Cómo cancelo mi suscripción?",
     "support.faq.cancelSubscription.answer":
-      'Las suscripciones se administran a través de Apple. Ve a Ajustes del iPhone → Apple ID → Suscripciones → MacroIt → Cancelar suscripción. También puedes tocar "Administrar suscripción" desde la pestaña Perfil.',
+      'Las suscripciones se administran a través de Apple. Ve a Ajustes del iPhone → Apple ID → Suscripciones → MacroIt → Cancelar suscripción. También puedes tocar "Administrar suscripción" en Ajustes → Perfil personal.',
 
     "support.faq.dataLoss.question": "¿Perderé mis datos si elimino la app?",
     "support.faq.dataLoss.answer":

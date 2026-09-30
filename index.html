@@ -159,7 +159,7 @@
     <!-- Intro Offer Banner -->
     <div class="bg-blue-600 text-white text-center py-2 text-sm font-medium">
       <a href="#pricing" class="hover:underline" data-i18n="banner.offer">
-        🎉 Intro Offer — Get 3 months of Pro for $4.99 →
+        Intro Offer — Get your first 3 months of Pro for $7.99 →
       </a>
 
       <span
@@ -312,8 +312,8 @@
               class="text-gray-500 text-sm"
               data-i18n="features.watch.description"
             >
-              5 dedicated tabs — Macros, Health, Water, Quick Log, and
-              Achievements — with 30+ live complications and real-time sync.
+              6 dedicated tabs — Macros, Health, Water, Quick Log, Achievements,
+              and Friends — with 30+ live complications and real-time sync.
             </p>
           </div>
 
@@ -1252,21 +1252,14 @@
             </a>
           </div>
 
-          <!-- Pro -->
-          <div class="pricing-card featured">
-            <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
-              <span
-                class="bg-blue-600 text-white text-xs font-bold px-4 py-1 rounded-full"
-                data-i18n="pricing.pro.bestValue"
-              >
-                ⭐ BEST VALUE
-              </span>
-            </div>
-
-            <h3 class="text-xl font-bold mb-1">Pro</h3>
+          <!-- Pro Monthly -->
+          <div class="pricing-card">
+            <h3 class="text-xl font-bold mb-1" data-i18n="pricing.monthly.name">
+              Pro Monthly
+            </h3>
 
             <div class="text-4xl font-bold text-gray-900 mb-1">
-              $4.99
+              $7.99
               <span
                 class="text-lg font-normal text-gray-400"
                 data-i18n="pricing.pro.month"
@@ -1275,15 +1268,11 @@
               </span>
             </div>
 
-            <p class="text-sm text-gray-400 mb-1" data-i18n="pricing.pro.year">
-              or $39.99/year — save 33%
-            </p>
-
             <p
               class="text-sm text-blue-600 font-semibold mb-6"
               data-i18n="pricing.pro.offer"
             >
-              🎉 Intro Offer: 3 months for $4.99
+              Intro Offer: first 3 months for $7.99
             </p>
 
             <ul class="space-y-2 text-sm text-gray-600 mb-8">
@@ -1324,53 +1313,73 @@
             </a>
           </div>
 
-          <!-- Lifetime -->
-          <div class="pricing-card">
+          <!-- Pro Yearly -->
+          <div class="pricing-card featured">
             <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
               <span
-                class="founders-deal text-xs font-bold px-4 py-1 rounded-full"
-                data-i18n="pricing.lifetime.deal"
+                class="bg-blue-600 text-white text-xs font-bold px-4 py-1 rounded-full"
+                data-i18n="pricing.yearly.bestValue"
               >
-                🔥 FOUNDER'S DEAL
+                ⭐ BEST VALUE
               </span>
             </div>
 
-            <h3
-              class="text-xl font-bold mb-1"
-              data-i18n="pricing.lifetime.name"
-            >
-              Lifetime
+            <h3 class="text-xl font-bold mb-1" data-i18n="pricing.yearly.name">
+              Pro Yearly
             </h3>
 
-            <div class="text-4xl font-bold text-gray-900 mb-1">$59.99</div>
+            <div class="text-4xl font-bold text-gray-900 mb-1">
+              $59.99
+              <span
+                class="text-lg font-normal text-gray-400"
+                data-i18n="pricing.yearly.period"
+              >
+                /year
+              </span>
+            </div>
 
             <p
-              class="text-sm text-gray-400 mb-6"
-              data-i18n="pricing.lifetime.once"
+              class="text-sm text-green-600 font-semibold mb-6"
+              data-i18n="pricing.yearly.savings"
             >
-              Pay once · Own forever
+              Save 37% compared to monthly
             </p>
 
             <ul class="space-y-2 text-sm text-gray-600 mb-8">
-              <li data-i18n="pricing.lifetime.everything">
-                ✓ Everything in Pro
+              <li data-i18n="pricing.pro.everything">✓ Everything in Free</li>
+              <li data-i18n="pricing.pro.ai">✓ 200 AI scans/month</li>
+              <li data-i18n="pricing.pro.meals">✓ AI Meal Suggestions</li>
+              <li data-i18n="pricing.pro.recap">✓ AI Weekly Recap</li>
+              <li data-i18n="pricing.pro.recipe">
+                ✓ Recipe Builder (AI ingredients)
               </li>
-              <li data-i18n="pricing.lifetime.ai">✓ 200 AI scans/month</li>
-              <li data-i18n="pricing.lifetime.forever">
-                ✓ All Pro features forever
+              <li data-i18n="pricing.pro.journal">✓ Food Photo Journal</li>
+              <li data-i18n="pricing.pro.achievements">
+                ✓ Achievement System & Certificates
               </li>
-              <li data-i18n="pricing.lifetime.noRecurring">
-                ✓ No recurring charges
+              <li data-i18n="pricing.pro.reports">
+                ✓ Nutrition & Vitals Reports
               </li>
-              <li data-i18n="pricing.lifetime.limited">✓ Limited time offer</li>
+              <li data-i18n="pricing.pro.insights">
+                ✓ Advanced Insights (30/60/90 days)
+              </li>
+              <li data-i18n="pricing.pro.export">✓ Data Export (CSV)</li>
+              <li data-i18n="pricing.pro.presets">✓ Unlimited Meal Presets</li>
+              <li data-i18n="pricing.pro.planner">
+                ✓ Meal Planner + AI Auto-Plan
+              </li>
+              <li data-i18n="pricing.pro.social">
+                ✓ Friends, Chat & Leaderboard
+              </li>
+              <li data-i18n="pricing.pro.support">✓ Priority support</li>
             </ul>
 
             <a
               href="https://apps.apple.com/app/id6781807960"
-              class="block text-center border-2 border-gray-300 text-gray-700 py-3 rounded-xl font-semibold hover:border-blue-400 transition w-full"
-              data-i18n="pricing.lifetime.button"
+              class="block text-center cta-button w-full"
+              data-i18n="pricing.pro.button"
             >
-              Get Lifetime
+              Get Pro
             </a>
           </div>
         </div>

@@ -953,3 +953,28 @@ function initializeLanguage() {
 }
 
 document.addEventListener("DOMContentLoaded", initializeLanguage);
+
+function initializeBackToTop() {
+  const backToTopButton = document.getElementById("back-to-top");
+
+  if (!backToTopButton) return;
+
+  const updateBackToTopVisibility = () => {
+    backToTopButton.classList.toggle("is-visible", window.scrollY > 500);
+  };
+
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+
+  window.addEventListener("scroll", updateBackToTopVisibility, {
+    passive: true,
+  });
+
+  updateBackToTopVisibility();
+}
+
+document.addEventListener("DOMContentLoaded", initializeBackToTop);

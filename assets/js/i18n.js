@@ -931,16 +931,7 @@ function setLanguage(language) {
 
   document.querySelectorAll("[data-language]").forEach((button) => {
     const isActive = button.dataset.language === selectedLanguage;
-
     button.setAttribute("aria-pressed", String(isActive));
-
-    if (isActive) {
-      button.classList.add("text-blue-600", "font-bold");
-      button.classList.remove("text-gray-500", "text-gray-600");
-    } else {
-      button.classList.add("text-gray-500");
-      button.classList.remove("text-blue-600", "font-bold", "text-gray-600");
-    }
   });
 
   localStorage.setItem("macroit-language", selectedLanguage);

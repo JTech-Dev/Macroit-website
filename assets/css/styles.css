@@ -203,3 +203,23 @@ body {
 .achievement-card-immortal {
   border-color: #06b6d4;
 }
+
+/* Language selector */
+.language-selector .language-button {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  min-width: 0;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.language-selector .language-button[aria-pressed="true"] {
+  background: transparent !important;
+  color: #2563eb !important;
+  font-weight: 700 !important;
+  box-shadow: none !important;
+}

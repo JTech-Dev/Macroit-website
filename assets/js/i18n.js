@@ -532,12 +532,12 @@ const translations = {
     "achievements.description":
       "Mantén tu constancia con 18 logros de Nutrición, Salud y Agua. Gana puntos cada día, crea rachas y avanza entre títulos mensuales.",
 
-    "achievements.rookie": "Novato",
-    "achievements.consistent": "Constante",
-    "achievements.dedicated": "Dedicado",
-    "achievements.elite": "Élite",
-    "achievements.legend": "Leyenda",
-    "achievements.immortal": "Inmortal",
+    "achievements.rookie": "Rookie",
+    "achievements.consistent": "Consistent",
+    "achievements.dedicated": "Dedicated",
+    "achievements.elite": "Elite",
+    "achievements.legend": "Legend",
+    "achievements.immortal": "Immortal",
 
     "achievements.calendar.title": "Calendario de logros",
     "achievements.calendar.description":
@@ -625,7 +625,7 @@ const translations = {
 
     "pro.achievements.title": "Sistema de logros",
     "pro.achievements.description":
-      "18 insignias, 10 hitos de por vida, títulos mensuales desde Novato hasta Inmortal, tarjetas para compartir y certificados PDF por alcanzar hitos en MacroIt.",
+      "18 insignias, 10 hitos de por vida, títulos mensuales desde Rookie hasta Immortal, tarjetas para compartir y certificados PDF por alcanzar hitos en MacroIt.",
 
     "pro.export.title": "Exportación de datos",
     "pro.export.description":

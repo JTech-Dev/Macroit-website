@@ -934,10 +934,13 @@ function setLanguage(language) {
 
     button.setAttribute("aria-pressed", String(isActive));
 
-    button.classList.toggle("bg-blue-600", isActive);
-    button.classList.toggle("text-white", isActive);
-    button.classList.toggle("shadow-sm", isActive);
-    button.classList.toggle("text-gray-600", !isActive);
+    if (isActive) {
+      button.classList.add("text-blue-600", "font-bold");
+      button.classList.remove("text-gray-500", "text-gray-600");
+    } else {
+      button.classList.add("text-gray-500");
+      button.classList.remove("text-blue-600", "font-bold", "text-gray-600");
+    }
   });
 
   localStorage.setItem("macroit-language", selectedLanguage);

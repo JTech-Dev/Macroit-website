@@ -43,7 +43,7 @@ const translations = {
       "Scan any packaged food and get instant nutrition info from millions of products in the Open Food Facts database.",
 
     "features.watch.description":
-      "6 dedicated tabs — Macros, Health, Water, Quick Log, Achievements, and Friends — with 30+ live complications and real-time sync.",
+      "7 dedicated tabs — Macros, Health, Water, Quick Log, Achievements, Friends and Macrit — with 30+ live complications and real-time sync.",
 
     "features.water.title": "Water Tracking",
     "features.water.description":
@@ -210,8 +210,10 @@ const translations = {
       "MacroIt syncs seamlessly with your Apple Watch. Log water, check your macros, log meals from presets, and track achievements — all without touching your phone.",
 
     "watch.one":
-      "6 dedicated tabs: Macros, Health, Water, Quick Log, Achievements and Friends",
+      "7 dedicated tabs: Macros, Health, Water, Quick Log, Achievements, Friends and Macrit",
     "watch.two": "30+ watch face complications",
+    "watch.macrit":
+      "Follow Macrit's evolution, level progress, daily XP, and Monthly Mastery rank right from your wrist",
     "watch.three": "Quick meal logging from presets on your wrist",
     "watch.four": "Heart rate, HRV, stress level & sleep tracking",
     "watch.five": "Independent HealthKit updates every 15 minutes",
@@ -467,6 +469,9 @@ const translations = {
     "macrit.gallery.chat": "Chat with Macrit",
     "macrit.gallery.view": "Meet your companion",
     "macrit.gallery.mastery": "Discover Macrit Mastery",
+
+    "pricing.free.macrit": "✓ Macrit AI Companion",
+    "pricing.pro.macrit": "✓ Macrit XP, Evolutions & Monthly Mastery",
   },
 
   es: {
@@ -515,7 +520,7 @@ const translations = {
       "Escanea cualquier alimento empacado y obtén información nutricional al instante de millones de productos en la base de datos de Open Food Facts.",
 
     "features.watch.description":
-      "6 pestañas dedicadas — Macros, Salud, Agua, Registro rápido, Logros y Amigos — con más de 30 complicaciones en vivo y sincronización en tiempo real.",
+      "7 pestañas dedicadas — Macros, Salud, Agua, Registro rápido, Logros, Amigos y Macrit — con más de 30 complicaciones en vivo y sincronización en tiempo real.",
 
     "features.water.title": "Seguimiento de agua",
     "features.water.description":
@@ -689,7 +694,9 @@ const translations = {
       "MacroIt se sincroniza fácilmente con tu Apple Watch. Registra agua, consulta tus macros, registra comidas desde presets y sigue tus logros — todo sin tocar tu iPhone.",
 
     "watch.one":
-      "6 pestañas dedicadas: Macros, Salud, Agua, Registro rápido, Logros y Amigos",
+      "7 pestañas dedicadas: Macros, Salud, Agua, Registro rápido, Logros, Amigos y Macrit",
+    "watch.macrit":
+      "Sigue la evolución de Macrit, su nivel, XP diarios y rango de Maestría Mensual directamente desde tu muñeca",
     "watch.two": "Más de 30 complicaciones para la esfera del Apple Watch",
     "watch.three":
       "Registra comidas rápidamente desde tus presets en la muñeca",
@@ -955,6 +962,9 @@ const translations = {
     "macrit.gallery.chat": "Chatea con Macrit",
     "macrit.gallery.view": "Conoce a tu compañero",
     "macrit.gallery.mastery": "Descubre Macrit Mastery",
+
+    "pricing.free.macrit": "✓ Macrit, tu compañero de IA",
+    "pricing.pro.macrit": "✓ Macrit: XP, evoluciones y Maestría Mensual",
   },
 };
 

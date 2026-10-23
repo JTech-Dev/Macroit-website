@@ -441,6 +441,32 @@ const translations = {
     "terms.footer.home": "Home",
     "terms.footer.privacy": "Privacy Policy",
     "terms.footer.support": "Support",
+
+    // MARK: - Macrit AI Assistant
+
+    "macrit.badge": "💪 MEET MACRIT",
+    "macrit.title": "Meet Macrit, your AI companion.",
+    "macrit.description":
+      "Get friendly help navigating MacroIt, understanding nutrition tracking, and making the most of the app—in English or Spanish.",
+    "macrit.cta": "Meet Macrit in MacroIt →",
+
+    "macrit.guide.title": "Ask about MacroIt",
+    "macrit.guide.description":
+      "Ask how to use features, log meals, or find the right settings.",
+
+    "macrit.nutrition.title": "Nutrition guidance",
+    "macrit.nutrition.description":
+      "Get helpful explanations about food logging and tracking your macros.",
+
+    "macrit.mastery.title": "Macrit Mastery",
+    "macrit.mastery.description":
+      "Explore Macrit Mastery as you get to know your in-app companion.",
+
+    "macrit.gallery.title": "Take a peek inside",
+    "macrit.gallery.description": "See Macrit in action inside MacroIt.",
+    "macrit.gallery.chat": "Chat with Macrit",
+    "macrit.gallery.view": "Meet your companion",
+    "macrit.gallery.mastery": "Discover Macrit Mastery",
   },
 
   es: {
@@ -903,6 +929,32 @@ const translations = {
     "terms.footer.home": "Inicio",
     "terms.footer.privacy": "Política de privacidad",
     "terms.footer.support": "Soporte",
+
+    // MARK: - Asistente de IA Macrit
+
+    "macrit.badge": "💪 CONOCE A MACRIT",
+    "macrit.title": "Conoce a Macrit, tu compañero con IA.",
+    "macrit.description":
+      "Recibe ayuda para navegar MacroIt, entender el seguimiento nutricional y aprovechar la app al máximo, en español o inglés.",
+    "macrit.cta": "Conoce a Macrit en MacroIt →",
+
+    "macrit.guide.title": "Pregunta sobre MacroIt",
+    "macrit.guide.description":
+      "Pregunta cómo usar funciones, registrar comidas o encontrar los ajustes adecuados.",
+
+    "macrit.nutrition.title": "Orientación nutricional",
+    "macrit.nutrition.description":
+      "Recibe explicaciones útiles sobre el registro de alimentos y el seguimiento de tus macros.",
+
+    "macrit.mastery.title": "Macrit Mastery",
+    "macrit.mastery.description":
+      "Explora Macrit Mastery mientras conoces a tu compañero dentro de la app.",
+
+    "macrit.gallery.title": "Descubre cómo funciona",
+    "macrit.gallery.description": "Mira a Macrit en acción dentro de MacroIt.",
+    "macrit.gallery.chat": "Chatea con Macrit",
+    "macrit.gallery.view": "Conoce a tu compañero",
+    "macrit.gallery.mastery": "Descubre Macrit Mastery",
   },
 };
 
